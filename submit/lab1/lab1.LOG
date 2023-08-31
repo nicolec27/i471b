@@ -1,0 +1,396 @@
+Script started on 2023-08-31 15:08:13-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004hnchan14@n01-03:~/i471b/submit/lab1$ cd ~/i471b/submit.[K/lab1/exercises/regex
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ls
+[?2004ldata.txt  lex1.mjs  lexer.mjs  table-lexer.mjs
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./k[Klexer.mjs
+[?2004lusage: lexer.mjs RE_TABLE_FILE INPUT_FILE
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer.mjs lex1.mjs dara[K[Kta.tx t
+[?2004lToken { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'A'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'34'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'_'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'22'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'I'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'D'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'_'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'44'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'/'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'/'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'a'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m's'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'd'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m's'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'd'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'f'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m's'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ gedit lex2.mjs&[K
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ gedit lex1.mjs
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ gedit la[Kex2.mjs&
+[?2004l[1] 2599354
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ 
+(gedit:2599354): Gtk-[1;33mWARNING[0m **: [34m15:14:35.561[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004ldata.txt  lex1.mjs  lex2.mjs  lexer.mjs  table-lexer.mjs
+[1]+  Done                    gedit lex2.mjs
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ gedit lex2.,m[K[K[K.mjs
+[?2004l
+(gedit:2599630): Gtk-[1;33mWARNING[0m **: [34m15:20:03.979[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer/mjs [K[K[K[K[K.mjs lex2.mjs data.tx t
+[?2004lToken { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'/'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m'/'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'asd'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'sdfs'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ [Knchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ [Knchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ git[K[Kedit lex3.mjs&
+[?2004l[1] 2602537
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ 
+(gedit:2602537): Gtk-[1;33mWARNING[0m **: [34m15:23:15.799[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004ldata.txt  lex1.mjs  lex2.mjs  lex3.mjs	lexer.mjs  table-lexer.mjs
+[1]+  Done                    gedit lex3.mjs
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer.mjs lex3.mjs data.txt
+[?2004lToken { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ gedit lex3.mjs&
+[?2004l[1] 2604763
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ 
+(gedit:2604763): Gtk-[1;33mWARNING[0m **: [34m15:29:49.320[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004ldata.txt  lex1.mjs  lex2.mjs  lex3.mjs	lexer.mjs  table-lexer.mjs
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ lsgedit lex3.mjs&./lexer.mjs lex3.mjs data.txt
+[?2004lToken { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer.mjs lex3.mjs data.txt
+[?2004lToken { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer.mjs lex3.mjs data.txt
+[?2004lToken { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'asd'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'sdfs'[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'CHAR'[39m, lexeme: [32m' '[39m }
+Token { kind: [32m'$err'[39m, lexeme: [32m'\n'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ ./lexer.mjs lex3.mjs data.txt
+[?2004lToken { kind: [32m'INT'[39m, lexeme: [32m'21'[39m }
+Token { kind: [32m'INT'[39m, lexeme: [32m'23'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'A34'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'_22'[39m }
+Token { kind: [32m'ID'[39m, lexeme: [32m'ID_44'[39m }
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/regex$ cd ~[K[K[K[Kcd ~/i[K[K[K[K ..
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises$ cd lexer
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ls
+[?2004ldata.txt  Lexer.java  lexer.mjs  lexer.py
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ lexer.py[K[K[K[K[K[K[K[Kgei[Kdit lev[Kxer.py&
+[?2004l[2] 2607756
+[1]   Done                    gedit lex3.mjs  (wd: ~/i471b/submit/lab1/exercises/regex)
+(wd now: ~/i471b/submit/lab1/exercises/lexer)
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ 
+(gedit:2607756): Gtk-[1;33mWARNING[0m **: [34m15:38:00.703[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004ldata.txt  Lexer.java  lexer.mjs  lexer.py
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lTraceback (most recent call last):
+  File "/home/nchan14/i471b/submit/lab1/exercises/lexer/./lexer.py", line 51, in <module>
+    main()
+  File "/home/nchan14/i471b/submit/lab1/exercises/lexer/./lexer.py", line 36, in main
+    tokens = scan(contents)
+             ^^^^^^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab1/exercises/lexer/./lexer.py", line 18, in scan
+    if (m := re.compile(r'\s+'|'/').match(text)) :
+                        ~~~~~~^~~~
+TypeError: unsupported operand type(s) for |: 'str' and 'str'
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='A', lexeme='A')
+Token(kind='INT', lexeme='34')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='22')
+Token(kind='I', lexeme='I')
+Token(kind='D', lexeme='D')
+Token(kind='_', lexeme='_')
+Token(kind='INT', lexeme='44')
+Token(kind='a', lexeme='a')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='s', lexeme='s')
+Token(kind='d', lexeme='d')
+Token(kind='f', lexeme='f')
+Token(kind='s', lexeme='s')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='INT', lexeme='A34')
+Token(kind='INT', lexeme='_22')
+Token(kind='INT', lexeme='ID_44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='INT', lexeme='asd')
+Token(kind='INT', lexeme='sdfs')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='ID', lexeme='A34')
+Token(kind='ID', lexeme='_22')
+Token(kind='ID', lexeme='ID_44')
+Token(kind='/', lexeme='/')
+Token(kind='/', lexeme='/')
+Token(kind='ID', lexeme='asd')
+Token(kind='ID', lexeme='sdfs')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='ID', lexeme='A34')
+Token(kind='ID', lexeme='_22')
+Token(kind='ID', lexeme='ID_44')
+Token(kind='ID', lexeme='asd')
+Token(kind='ID', lexeme='sdfs')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='ID', lexeme='A34')
+Token(kind='ID', lexeme='_22')
+Token(kind='ID', lexeme='ID_44')
+Token(kind='ID', lexeme='asd')
+Token(kind='ID', lexeme='sdfs')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ ./lexer.py data.txt
+[?2004lToken(kind='INT', lexeme='21')
+Token(kind='INT', lexeme='23')
+Token(kind='ID', lexeme='A34')
+Token(kind='ID', lexeme='_22')
+Token(kind='ID', lexeme='ID_44')
+[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises/lexer$ cd ..
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1/exercises$ cd ..
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab1$ [?2004l
+exit
+
+Script done on 2023-08-31 15:52:18-04:00 [COMMAND_EXIT_CODE="0"]
