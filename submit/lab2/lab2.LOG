@@ -1,0 +1,497 @@
+Script started on 2023-09-07 15:10:20-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2$ cd ~/i471 [Kb/submit.l[K[K/lab2/exercies[K[Kses/calc
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ car[Kt data.txt
+[?2004l1 + 2 - 3;
+
+--2 - (3 - 4);
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.mjs
+[?2004lusage: calc.mjs INPUT_FILE
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ 
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.mjs data.txt
+[?2004l[ [33m0[39m, [33m3[39m ]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ car[Kt ep[Kxpn.txt[K[K[K[K-data.txt
+[?2004l-2 ** 2 ** 3 ;
+1 + 2**(1 + 5) ;
+1 + -2**(1 + 5) ;
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.y [K[Kpy expn-dt[Kata.txt
+[?2004lexpecting ; at *
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ gedit [K[K[K[K[K[Kls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ gedit calc.py&
+[?2004l[1] 3140356
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ 
+(gedit:3140356): Gtk-[1;33mWARNING[0m **: [34m15:31:45.599[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ lsgedit calc.py&ls[K./calc.py expn-data.txt
+[?2004l  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 61
+    while (peek('**'):
+                     ^
+SyntaxError: invalid syntax
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004lexpecting ; at *
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004l[64, 729, 1]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004l  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 68
+    while (peek('**')):
+TabError: inconsistent use of tabs and spaces in indentation
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004l  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 69
+    consume('**')
+TabError: inconsistent use of tabs and spaces in indentation
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004lTraceback (most recent call last):
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 137, in <module>
+    main()
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 123, in main
+    print(parse(contents))
+          ^^^^^^^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 90, in parse
+    value = program()
+            ^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 50, in program
+    values.append(expr())
+                  ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 55, in expr
+    t = term()
+        ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 66, in term
+    return - term()
+             ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 73, in term
+    return t
+           ^
+UnboundLocalError: cannot access local variable 't' where it is not associated with a value
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004lTraceback (most recent call last):
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 138, in <module>
+    main()
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 124, in main
+    print(parse(contents))
+          ^^^^^^^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 91, in parse
+    value = program()
+            ^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 50, in program
+    values.append(expr())
+                  ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 55, in expr
+    t = term()
+        ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 66, in term
+    return - term()
+             ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 68, in term
+    t = term()
+        ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 68, in term
+    t = term()
+        ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 68, in term
+    t = term()
+        ^^^^^^
+  [Previous line repeated 989 more times]
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 64, in term
+    if (peek('-')):
+        ^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/calc/./calc.py", line 29, in peek
+    def peek(kind): return lookahead.kind == kind
+                           ^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded in comparison
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ ./calc.py expn-data.txt
+[?2004l[-256, 65, -63]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/calc$ cd ~/i471b/submit/lab2/exerci ses/ast
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ls
+[?2004last.mjs  ast.py  data.json  data.txt  expn-data.json  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ jq -S
+[?2004ljq - commandline JSON processor [version 1.6]
+
+Usage:	jq [options] <jq filter> [file...]
+	jq [options] --args <jq filter> [strings...]
+	jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
+
+jq is a tool for processing JSON inputs, applying the given filter to
+its JSON text inputs and producing the filter's results as JSON on
+standard output.
+
+The simplest filter is ., which copies jq's input to its output
+unmodified (except for formatting, but note that IEEE754 is used
+for number representation internally, with all that that implies).
+
+For more advanced filters see the jq(1) manpage ("man jq")
+and/or https://stedolan.github.io/jq
+
+Example:
+
+	$ echo '{"foo": 0}' | jq .
+	{
+		"foo": 0
+	}
+
+For a listing of options, use jq --help.
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ jq -S ..
+[?2004lq 
+^C
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ls
+[?2004last.mjs  ast.py  data.json  data.txt  expn-data.json  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ geidt [K[K[K[Kdit ast.py&
+[?2004l[2] 3160455
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ jq -S . [K[K[K[K[K[K[K[Kjq -S .
+[?2004l^C
+[2]+  Done                    gedit ast.py
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ jq -S .gedit ast.py&ls[Kjq -S ..ls[K[K[K./ast.p[Kmjs [K[K[K=][K[K[Kpy data.txt
+[?2004l[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ./ast.py data.txt[10Pjq -S .
+[?2004l[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}]
+[1;39m[
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m,
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m3[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m,
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+                  [1;39m{
+                    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                    [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+                  [1;39m}[0m[1;39m
+                [1;39m][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+                  [1;39m{
+                    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                    [0m[34;1m"value"[0m[1;39m: [0m[0;39m3[0m[1;39m,
+                    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+                  [1;39m}[0m[1;39m
+                [1;39m][0m[1;39m
+              [1;39m}[0m[1;39m,
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+                  [1;39m{
+                    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                    [0m[34;1m"value"[0m[1;39m: [0m[0;39m4[0m[1;39m,
+                    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+                  [1;39m}[0m[1;39m
+                [1;39m][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m][0m
+^C
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ls
+[?2004last.mjs  ast.py  data.json  data.txt  expn-data.json  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ diff data.json [K [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdiff data.json [7m[{"tag":"-","xk[27m[7mi[27m[7mds":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1[27m[7m}[27m[7m]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xki[27m[7md[27m[7ms":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkid[27m[7ms[27m[7m":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}][27m[7m}[27m[7m]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT"[27m[7m,[27m[7m"xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}[27m[7m][27m[7m}]}]}]}] [27m
+[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}]
+[A
+[?2004ldiff: extra operand '[tag:-,xkids:[tag:-]'
+diff: Try 'diff --help' for more information.
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit data.json
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit data.jsondiff data.json [{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}][A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjq -S ../ast.py data.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+[?2004last.mjs  ast.py  data.json  data.txt  expn-data.json  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ lsgedit data.jsondiff data.json [{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}][A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjq -S ../ast.py data.txt[K[K[K[K[K[K[K[Kexpn-data.txt
+[?2004lTraceback (most recent call last):
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 143, in <module>
+    main()
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 123, in main
+    asts = parse(contents)
+           ^^^^^^^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 91, in parse
+    value = program()
+            ^^^^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 49, in program
+    asts.append(expr())
+                ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 54, in expr
+    t = term()
+        ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 65, in term
+    return Ast('-', term())
+                    ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 70, in term
+    t1 = term()
+         ^^^^^^
+  File "/home/nchan14/i471b/submit/lab2/exercises/ast/./ast.py", line 71, in term
+    t **= t1
+TypeError: unsupported operand type(s) for **=: 'dict' and 'dict'
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ./ast.py expn-data.txt
+[?2004l[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"INT","xkids":[],"value":3}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]}]}]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ./ast.py expn-data.txtls[Kgedit data.jsondiff data.json [{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":1}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"**","xkids":[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":3}]},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":4}]}]}]}]}][A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjq -S .
+[?2004l[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"INT","xkids":[],"value":3}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]}]}]
+[1;39m[
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m,
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m,
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m3[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m,
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+        [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m,
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m,
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m,
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+        [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"**"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m,
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+                  [1;39m{
+                    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                    [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+                    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+                  [1;39m}[0m[1;39m,
+                  [1;39m{
+                    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                    [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+                  [1;39m}[0m[1;39m
+                [1;39m][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m][0m
+^C
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit comp[K[K[K[Ktesting.txt&[K[K[K[K[K[K[K[K[K[K[K[Kcomp.json
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ diff comp.json [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+[?2004last.mjs  ast.py  comp.json  data.json  data.txt  expn-data.json  expn-data.txt
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ diff comp.json expn.json[K[K[K[K[K-data.json
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit expn-data.json [K
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit comp.json
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit comp.jsonexpn-data.json[9@diff comp.json[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kgedit comp.json[8Pjq -S ../ast.py expn-data.txt[K[K[K[K[K[K[K[K[K[K[K[K[Keq[K[Kdata.txt
+[?2004l[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]},{"tag":"INT","xkids":[],"value":3}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":3},{"tag":"INT","xkids":[],"value":4}]}]}]
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ ./ast.py data.txt[2Pgedit comp.jsonexpn-data.json[9@diff comp.json[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kgedit comp.json[8Pjq -S .
+[?2004l[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]},{"tag":"INT","xkids":[],"value":3}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":3},{"tag":"INT","xkids":[],"value":4}]}]}]
+[1;39m[
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"+"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m1[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m,
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+        [0m[34;1m"value"[0m[1;39m: [0m[0;39m3[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m,
+  [1;39m{
+    [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+    [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+              [1;39m{
+                [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+                [0m[34;1m"value"[0m[1;39m: [0m[0;39m2[0m[1;39m,
+                [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+              [1;39m}[0m[1;39m
+            [1;39m][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"-"[0m[1;39m,
+        [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m3[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m,
+          [1;39m{
+            [0m[34;1m"tag"[0m[1;39m: [0m[0;32m"INT"[0m[1;39m,
+            [0m[34;1m"value"[0m[1;39m: [0m[0;39m4[0m[1;39m,
+            [0m[34;1m"xkids"[0m[1;39m: [0m[1;39m[][0m[1;39m
+          [1;39m}[0m[1;39m
+        [1;39m][0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m][0m
+^C
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ gedit data.json
+[?2004l[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises/ast$ cd ..
+[?2004l[1]+  Done                    gedit calc.py  (wd: ~/i471b/submit/lab2/exercises/calc)
+(wd now: ~/i471b/submit/lab2/exercises)
+[?2004hnchan14@n01-06:~/i471b/submit/lab2/exercises$ [?2004l
+exit
+
+Script done on 2023-09-07 16:06:27-04:00 [COMMAND_EXIT_CODE="0"]

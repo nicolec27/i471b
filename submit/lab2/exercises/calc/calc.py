@@ -65,7 +65,13 @@ def parse(text):
             consume('-')
             return - term()
         else:
-            return factor()
+            t = factor()
+            while (peek('**')):
+                
+                consume('**')
+                t1 = term()
+                t **= t1
+            return t
 
     def factor():
         if (peek('INT')):
@@ -92,13 +98,17 @@ def scan(text):
     SPACE_RE = re.compile(r'\s+')
     INT_RE = re.compile(r'\d+')
     CHAR_RE = re.compile(r'.')
+    EXP_RE = re.compile(r'\*\*')
     def next_match(text):
         m = SPACE_RE.match(text)
         if (m): return (m, None)
         m = INT_RE.match(text)
         if (m): return (m, 'INT')
+        m = EXP_RE.match(text)
+        if (m): return (m, m.group())
         m = CHAR_RE.match(text)  #must be last: match any char
         if (m): return (m, m.group())
+
 
     tokens = []
     while (len(text) > 0):
