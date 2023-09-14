@@ -1,0 +1,150 @@
+Script started on 2023-09-14 14:55:41-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> (+ 1 (/ 1 2) ( [17G/ 1 3) (/ 1 4) (/ 1 5))
+137/60
+> (+ (/ 1 6))
+1/6
+> > (+ (/ 1 6))[6G[2@1 [13G2) (/ 1 3) (/ 1 4) (/ 1 5))[39G[K (/1[42G[K 1 6))
+49/20
+> > (+ 1 (/ 1 2) (/ 1 3) (/ 1 4) (/ 1 5) (/ 1 6))1[7G[1@. [8G[1@0  (/ 1 2) (/ 1 3) (/ 1 4) (/ 1 5) (/ 1 6))
+2.4499999999999997
+> 222> 22[K> 2[K> [K((+> (([K- (3 (exp([14G[K[13G[K[12G[K[11G[K[10G[K[9G[8G[K[7G[K[6G> (([K> ([K> [K(3 (expt 4 3))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 3
+; [,bt for context]
+> * > *> [K( * [6G> ( [K> (* 3 (x[9G[Kexpt 4 3))
+192
+> ((* 3 (expt 4 3)> ([1@-(> (-[1@ (> (-[P((* 3 (expt 4 3)> (-[1@ ((* 3 (expt 4 3) (* 2 (expt 4 2))))
+-6144
+> (- (* 3 (expt 4 3 )(3[23G[K[22G[K 2)[22G) 2) 2)[25G[K[24G[K(* 2 (expt 4 2)))
+160
+> (- (* 3 (expt 3[17G[K4 3 )[21G[K[20G)) ( [24G* 2 (expt 4 2)) [39G) (+ [43G [43G[42G[K[41G[K[40G> ([1@(-> ([1@+(> (+[1@ ((- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4 [50G))
+176
+> > (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4))> ([1@(+> ([1@-(> (-[1@ ((+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)) (1))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 1
+; [,bt for context]
+> > (- (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)) (1))1)[59G[K[57G)[K[56G)[K[55G)[K [6G[1@ ([6G[1@1 [8G[1@ ( (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)))
+-175
+> > (- 1  (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)))[6G[3P[54G) (1))[57G+1))[59G1))[59G 1))[60G01))[60G1))[K1[60G))[K[60G0))))[58G[1@ 11 0))
+175
+> > (- (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)) (+ 1 0))> ([P > ([1@+  (+ (- (* 3 (expt 4 3)) (* 2 (expt 4 2))) (* 4 4)) ([57G[1@-++[58G[P  1[59G 0))[K[59G0 0)) 0[61G))[K[61G1))
+175
+> (> [K+ (1[6G[K> + [K> +> [K( > (+ 1 [7G (/ 0.05 1))
+1.05
+> (expt (+ 1 (/ 0.05 1 [23G)) (* 1 5)
+  
+[1]+  Stopped                 racket
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> > > > > > > > > (expt (+1 (/ 0.05 1 [22G)) (* 1 5))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 1
+; [,bt for context]
+> > (expt (+1 (/ 0.05 1)) (* 1 5))+[11G[1@ 11 ((/ 0.05 1)) (* 1 5)))
+1.2762815625000004
+; readline-input:2:31: read-syntax: unexpected `)` [,bt for context]
+> > (expt (+ 1 (/ 0.05 1)) (* 1 5))))[34G[K
+1.2762815625000004
+> > (expt (+ 1 (/ 0.05 1)) (* 1 5))))> ([1@(e> ([1@*(> (*[1@ ((expt (+ 1 (/ 0.05 1)) (* 1 5)))[37G[K ([38G[K[37G)*[6G[1@ ([6G[1@1 [7G[1@0 [8G[1@0 [9G[1@0 0 (expt (+ 1 (/ 0.05 1)) (* 1 5)))
+1276.2815625000003
+> q
+; q: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> ; user break [,bt for context]
+^Z
+[2]+  Stopped                 racket
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ f[Kcd ~/i471b/submit.[K/lab3
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab3$ git add .
+[?2004l[?2004hnchan14@n01-03:~/i471b/submit/lab3$ git commit -m 'completed ex1'
+[?2004l[lab3 b22960e] completed ex1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 submit/lab3/lab3.LOG
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ git push
+[?2004lUsername for 'https://github.com': nicolec27
+Password for 'https://nicolec27@github.com': 
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 360 bytes | 360.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/nicolec27/i471b.git
+   1466974..b22960e  lab3 -> lab3
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ script -a LOG[K[K[Klab3.LOIG[K[KG
+[?2004lScript started, output log file is 'lab3.LOG'.
+[?2004hnchan14@n01-03:~/i471b/submit/lab3$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> (define list1 '(1 2 3 4 5 [28G))
+> (define liust[15G[K[14G[K[13G[Kst2 '(a b c d e))
+> (CAR[6G[K> (C[K> ([Kcar list [12G1)
+1
+> (cdr list 1)
+; cdr: arity mismatch;
+;  the expected number of arguments does not match the given number
+;   expected: 1
+;   given: 2
+; [,bt for context]
+> > (cdr list 1)[12G1)[K1> [K> (cdr list 1)[12G1)[K1)
+'(2 3 4 5)
+> (car list2)
+'a
+> cde> cd[Kr> cd[K> c[K> [K(cdr list2)
+'(b c d e)
+> (car (cdr (cdr list1)))
+3
+> (a> ([Kcaddr list1)
+3
+> > (caddr list1)[14G)[K[14G2))
+'c
+> (appebd [10G[9G[K[8G[Knd list 1 [17G[16G[K[15G1 liust[21G[K[20G[K[19G[Kst2)
+'(1 2 3 4 5 a b c d e)
+> mem> me[K> m[K> [Knenb=[7G[K[6G[K> ne[K> n[K> [K(member 'b '( ab [19G[18G[K [18G[17G[K[16Ga b c))\[23G[K
+'(b c)
+> caddr[7G[K[6G[K> ca[K> c[K> [K(caddr [9G[8G[Kdr c[11G[Kv[11G[K'b)
+; cadddr: contract violation
+;   expected: (cons/c any/c (cons/c any/c (cons/c any/c pair?)))
+;   given: 'b
+; [,bt for context]
+> (car '([9G[K[8G[K[7G[6G[K> (c[K> ([Klist-ref '(1 2 3 4 5 a b c d e) 6)
+'b
+> (list-ref list2 [18G[17G[K[16G[K[15G[K[14G[K[13G[Klist 2 [19G[18G[K[17G2 1)
+'b
+> car (d[8G[Kcdr (c[13G[K[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6G> ca[K> c[K> [K(car (cdr ([13G[Klist2))
+'b
+> (list-tail list2 2)
+'(c d e)
+> (list-tail list3 [19G[18G[K2 3)
+'(d e)
+> (append (list-tail list2 2) (list-tail list1 2)[28G[P)[28G[1@3)) (list-tail list1 2)
+  q
+    q  (append (list-tail list2 3) (list-tail list1 2)  ([8P[21G)[K  ([8@append ([29G) (list-tail list1 2))
+  stop
+  ; user break [,bt for context]
+,bt
+,bt
+; user break
+;   context...:
+;    /usr/share/racket/pkgs/readline-lib/readline/pread.rkt:231:0: read-cmdline-syntax
+;    /usr/share/racket/pkgs/xrepl-lib/xrepl/xrepl.rkt:1776:2: reader-loop
+;    /usr/share/racket/collects/racket/repl.rkt:11:26
+> > (append (list-tail list2 3) (list-tail list1 2)
+  q
+  (append (list-tail list2 3) (list-tail list1 2))
+  stop
+  ,bt[4A> ([8P[21G)[K
+[K
+[K
+[K
+[K[4A[22G[20G2)> (car (cdr list2))[K> (list-tail list2 2)[20G3)> ([8@append ([29G) (list-tail list1 2)
+  q
+  (append (list-tail list2 3) (list-tail list1 2))
+  stop
+  ,bt  ,b[K  ,[K  [K [K[A[7G[6G[K  st[K  s[K  [K [K[A[51G[50G[K[49G[K[48G[K[47G[46G[K[45G[K[44G[K[43G[K[42G[K[41G[40G[K[39G[K[38G[K[37G[K[36G[K[35G[K[34G[K[33G[K[32G[K[31G[K[30G[29G[K[28G[K[27G[26G[K[25
