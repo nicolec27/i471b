@@ -421,4 +421,65 @@ To https://github.com/nicolec27/i471b.git
 [P2[A[51G[50G[P[154G 22))))[K[A[50G[49G[P[155G))))[K[A[49G[48G[P[154G))))[K[A[48G[48G[P[153G))))[K[A[47G[46G[P[152G)))))[K[A[46G[45G[P 
 [K[A[45G[45G[P([43G[P [43G[P([41G[P [40G[P [39G[P [38G[P [37G[P [37G[P( (sqrt (+ (expt (abs (- (car '[65G[P((x . y)) (car '(w> ([8P[17G7 4) (10 8))[K> ([8@define ([25Gx y) (w z)) (cons x y) (cons w z) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w .  z)))) 2))))[A[155G> ([8P[17G7 4) (10 8))[K
 [K[A[29G> ([8@define ([25Gx y) (w z)) (cons x y) (cons w z) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w .  z)))) 2))))[A[24G'(x . y) '(w . z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))[K
-[K[A[152G[24G[P[32G[P[150G[27G[2P[32G[2P[146G'[65G[P((x . y[70G[P)[69G[P)[68G[P)[67G[P)[66G[P)[66G[1@c)[67G[1@o)[68G[1@n)[69G[1@s)[70G[1@ )[71G[1@x)[72G[1@ )[73G[1@y))) (car '(w '[82G[P((w . z[87G[P)[86G[P)[85G[P)[84G[P)[83G[P)[83G[1@c)[84G[1@o)[85G[1@n)[86G[1@s)[87G[1@ )[88G[1@w)[89G[1@ )[90G[1@z))))) 2) (expt (abs (- (cdr '([27G[2@. [35G[2P. z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w .[150G[27G[2P[32G[2P[146G[27G[2@. [34G[2@ .[150G[24G[1@'[33G[1@'[152G[24G(x y) (w z)) (cons x y) (cons w z) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w .  z)))) 2))))[A> ([8
+[K[A[152G[24G[P[32G[P[150G[27G[2P[32G[2P[146G'[65G[P((x . y[70G[P)[69G[P)[68G[P)[67G[P)[66G[P)[66G[1@c)[67G[1@o)[68G[1@n)[69G[1@s)[70G[1@ )[71G[1@x)[72G[1@ )[73G[1@y))) (car '(w '[82G[P((w . z[87G[P)[86G[P)[85G[P)[84G[P)[83G[P)[83G[1@c)[84G[1@o)[85G[1@n)[86G[1@s)[87G[1@ )[88G[1@w)[89G[1@ )[90G[1@z))))) 2) (expt (abs (- (cdr '([27G[2@. [35G[2P. z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w .[150G[27G[2P[32G[2P[146G[27G[2@. [34G[2@ .[150G[24G[1@'[33G[1@'[152G[24G(x y) (w z)) (cons x y) (cons w z) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w .  z)))) 2))))[A> ([8P[17G7 4) (10 8))[K
+[K[A[29G[16G[1@'[23G[1@'[31G> [K> (define (line-length '(x y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (dr '((x . y)) (cdr '(w . z)))) 2))))
+  ,bt
+  
+[2]+  Stopped                 racket
+[?2004hnchan14@remote00:~/i471b/submit/lab3$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> > (+ (expt 2 (- 10 7)) (expt 2 (- 8 4)))> (sqrt 25)[K> [Psqrt(25)> [1@(sqrt (+ (expt 2 (- 10 7)) (expt 2 (- 8 4))))[23G7 10)) (expt 2 (- 4 8))))> (line-length 7 4 10 8)[K> ([8@define ([24Gx y w z) (sqrt (+ (expt 2 (- x w)) (expt 2 (- y z)))))[16G [78G[16G-[78G> ([8P[16G7 4 10 8)[K> (sqrt (+ (expt 2 (- 7 10)) (expt 2 (- 4 8))))[23G10 7)) (expt 2 (- 8 4))))> [Psqrt(25)[K> [1@(sqrt 25)> (+ (expt 2 (- 10 7)) (expt 2 (- 8 4)))> [K> > > > > > (define (line-length (x y) (w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))
+> (line-length (7 4([20G[K) (10 8))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 7
+; [,bt for context]
+> > (line-length (7 4) (10 8))[16G[1@'((7 4) [23G[1@'((10 8))
+; -: contract violation
+;   expected: number?
+;   given: 'x
+; [,bt for context]
+> > (line-length '(7 4) '(10 8))[16G[P[22G[P[29G> ([8@define ([25Gx y) (w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))[24G[1@'((x y) [31G[1@'(
+; readline-input:4:28: define: duplicate argument identifier
+;   at: quote
+;   in: (define (line-length (quote (x y)) (quote (w z))) (sqrt (+ (expt (abs
+;     (- (car (quote (x . y))) (car (quote (w . z))))) 2) (expt (abs (- (cdr
+;     (quote (x . y))) (cdr (quote (w . z))))) 2))))
+; [,bt for context]
+> > (define (line-length '(x y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))> ([8P[18G7 4) '(10 8))[K[16G[P[22G[P[29G> ([8@define ([25Gx y) (w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2)))) '> ([8P[17G7 4) (10 8))[K[16G[1@'[23G[1@'[31G> ([8@define ([26Gx y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))> [Kcar> ca[K> c[K> [K(car (1 2([12G[K))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 1
+; [,bt for context]
+> car> ca[K> c[K> [K(car '(1 2))
+1
+> (+ (car'(1[12G[K[11G[K[10G[K '(1 2)) (cdr '( 1 [28G[27G[K[26G1 2)))
+; +: contract violation
+;   expected: number?
+;   given: '(2)
+; [,bt for context]
+> define > (+ (car '(1 2)) (cdr '(1 2)))> ([3P[13G))[K[8G[P([14G> (define (line-length '(x y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))> ([8P[18G7 4) '(10 8))[K> ([8@define ([26Gx y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))[147G[K[146G[K[145G[K[144G[K[143G[K[142G[141G[K[140G[K[139G[K[138G[K[137G[K[136G[135G[K[134G[133G[K[132G[K[131G[K[130G[129G[K[128G[K[127G[K[126G[K[125G[124G[K[123G[K[122G[K[121G[120G[K[119G[118G[K[117G[K[116G[K[115G[114G[K[113G[K[112G[K[111G[K[110G[109G[K[108G[K[107G[106G[K[105G[K[104G[K[103G[K[102G[101G[K[100G[K[99G[K[98G[K[97G[K[96G[95G[K[94G[K[93G[92G[K[91G[K[90G[K[89G[K[88G[K[87G[86G[K[85G[84G[K[83G[K[82G[K[81G[80G[K[79G[K[78G[K[77G[K[76G[75G[K[74G[K[73G[K[72G[71G[K[70G[69G[K[68G[K[67G[K[66G[65G[K[64G[K[63G[K[62G[K[61G[60G[K[59G[K[58G[57G[K[56G[K[55G[K[54G[K[53G[52G[K[51G[K[50G[K[49G[K[48G[K[47G[46G[K[45G[K[44G[43G[K[42G[K[41G[K[40G[K[39G[K[38G[37G[K[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[29G[K[28G[K[27G[26G[K[25G[K[24G[K[23G[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[Kpair [15G1 '(x y))
+> (define pair2 '(w z))
+> > (define pair2 '(w z))[15G1 '(x y))> (+ (car '(1 2)) (cdr '(1 2)))> ([3P[13G))[K[8G[P([14G> (define (line-length '(x y) '(w z)) (sqrt (+ (expt (abs (- (car '(x . y)) (car '(w . z)))) 2) (expt (abs (- (cdr '(x . y)) (cdr '(w . z)))) 2))))[29G[P [28G[P [28G[P'[26G[P [25G[P [24G[P [24G[1@p [25G[1@a [26G[1@i [27G[1@r [28G[1@1  '(w z)[36G[P [34G[P)[33G[P)[32G[P)[31G[P)[30G[P)[30G[1@p)[31G[1@a)[32G[1@i)[33G[1@r)[34G[1@2)) (sqrt (+ (expt (abs (- (car '(x . y)[73G[P [71G[P)[70G[P)[69G[P)[68G[P)[67G[P)[66G[P)[65G[P)[65G[1@l)[66G[1@i)[67G[1@s)[68G[1@t)[69G[1@1)) (car '(w . z)[87G[P [83G[P)[82G[P)[81G[P)[80G[P)[79G[P)[78G[P)[77G[P)[77G[1@l)[78G[1@i)[79G[1@d)[79G[P)[79G[1@s)[80G[1@t)[81G[1@2)))) 2) (expt (abs (- (cdr '(x . y)[116G[P [114G[P)[113G[P)[112G[P)[111G[P)[110G[P)[109G[P)[108G[P)[108G[1@l)[109G[1@i)[110G[1@s)[111G[1@t)[112G[1@1)) (cdr '(w . z))[130G[P [126G[P)[125G[P)[124G[P)[123G[P)[122G[P)[121G[P)[120G[P)[120G[1@l)[121G[1@i)[122G[1@s)[123G[1@t)[124G[1@2)))) 2))))
+> li> l[K> [K(line-legn[12G[K[11G[Kngth ([16G[K'(7 10[21G[K[20G[K4) '(10 8))
+; list1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (line-length '(7 4) '(10 8))> ([8@define ([24Gpair1 pair2) (sqrt (+ (expt (abs (- (car list1) (car list2))) 2) (expt (abs (- (cdr list1) (cdr list2))) 2))))t[68G[P1[67G[P1[66G[P1[65G[P1[65G[1@p1[66G[1@a1[67G[1@i1[68G[1@r11) (car list[80G[P2[79G[P2[78G[P2[77G[P2[76G[P2[76G[1@ 2[77G[1@p2[78G[1@a2[79G[1@i2[80G[1@r22))) 2) (expt (abs (- (cdr list1[112G[P)[111G[P)[110G[P)[109G[P)[108G[P)[107G[P)[107G[1@p)[108G[1@a)[109G[1@i)[110G[1@r)[111G[1@1)) (cdr list[122G[P2[121G[P2[120G[P2[119G[P2[119G[1@p2[120G[1@a2[121G[1@i2[122G[1@r22))) 2))))[85G[1@) [85G[P [85G[1@) [84G[1@~)[84G[P))[85G[P )[85G[1@2 [85G[1@ 22 2) (expt (abs (- (cdrpair1) (cdr pair2))) 2))))[109G[1@(p[109G[Pp[109G[1@ ppair1) (cdr pair2))) 2))))
+> (line> (define (line-length pair1 pair2) (sqrt (+ (expt (abs (- (car pair1) (car pair2))) 2 2) (expt (abs (- (cdr pair1) (cdr pair2))) 2))))> ([8P[16G'(7 4) '(10 8))[K
+; expt: arity mismatch;
+;  the expected number of arguments does not match the given number
+;   expected: 2
+;   given: 3
+; [,bt for context]
+> ; user break [,bt for context]
+^Z
+[3]+  Stopped                 racket
+[?2004hnchan14@remote00:~/i471b/submit/lab3$ git add .
+[?2004l[?2004hnchan14@remote00:~/i471b/submit/lab3$ compl[K[K[K[K[Kgit commit -m 'completed lab2[K3'
+[?2004l[lab3 4d3fa77] completed lab3
+ 1 file changed, 144 insertions(+), 1 deletion(-)
+[?2004hnchan14@remote00:~/i471b/submit/lab3$ git push
+[?2004lEnumerating objects: 14, done.
+Counting objects:   7% (1/
