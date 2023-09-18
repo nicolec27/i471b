@@ -26,10 +26,7 @@ array-struct
   ;
 object-struct
   : '{' keyStruct (',' keyStruct)* '}'
-  ;
-keyStruct
-  : identifier (':' struct)* 
-  ;  
+  ; 
 identifier
   : CHAR (CHAR | INT | '_')*
   ;
@@ -96,45 +93,44 @@ def parse(text):
       
         
     def array_struct():
-    #  t = term()
-    # while (peek('+') or (peek('-'))):
-    #     kind = lookahead.kind
-    #     consume(kind)
-    #     t1 = term()
-    #     t = Ast(kind, t, t1)
         consume('[')
-        structs = [];
+        structs = []
         t = struct() # keep getting error try list
         structs.append(t)
         while (peek(',')):
             consume(',')
             t1 = struct()
             structs.append(t1)
+            # print(structs)
+        
         consume(']')
         return structs
 
-    def keyStruct():
+    def object_struct():
+        keystruct = {}
+        consume('{')
+        # keyStructs = [] # change to an object or dictionary
         key = identifier()
+        # print(key)
         if (peek(':')):
             consume(':')
             value = struct()
-            return {key: value}
+            keystruct[key] = value
+            # print(keystruct)
         else:
-            return key
-
-
-    def object_struct():
-        consume('{')
-        keyStructs = [];
-        t = keyStruct() 
-        keyStructs.append(t)
+            keystruct[key] = key
         while (peek(',')):
             consume(',')
-            t1 = keyStruct()
-            keyStructs.append(t1)
-            # print(keyStructs)
+            key = identifier()
+            if (peek(':')):
+                consume(':')
+                value = struct()
+                keystruct[key] = value
+                # print(keystruct)
+            else:
+                keystruct[key] = key
         consume('}')
-        return keyStructs
+        return keystruct
     
     def identifier():
         if (peek('ID')):
@@ -163,10 +159,6 @@ def scan(text):
     ID_RE = re.compile(r'\w+')
     CONST_RE = re.compile(r'const')
     LET_RE = re.compile(r'let')
-    # TOK_RE = re.compile(r'\[')
-    # TOK2_RE = re.compile(r'\]')
-    # COMMA_RE = re.compile(r',')
-    # EQUAL_RE = re.compile(r'=')
     CHAR_RE = re.compile(r'.')
     def next_match(text):
         m = SPACE_RE.match(text)
@@ -175,14 +167,6 @@ def scan(text):
         if (m): return (m, 'const')
         m = LET_RE.match(text)
         if (m): return (m, 'let')
-        # m = TOK_RE.match(text)
-        # if (m): return (m, '[')
-        # m = COMMA_RE.match(text)
-        # if (m): return (m, ',')
-        # m = TOK2_RE.match(text)
-        # if (m): return (m, ']')
-        # m = EQUAL_RE.match(text)
-        # if (m): return (m, '=')
         m = ID_RE.match(text)
         if (m): return (m, 'ID')
       
@@ -213,7 +197,6 @@ def usage():
     print(f'usage: {sys.argv[0]} DATA_FILE')
     sys.exit(1)
 
-#use a dict so that we can add attributes dynamically
 def Ast(decl, id, struct):
     return { 'decl': decl, 'id': id, 'struct': struct }
 
