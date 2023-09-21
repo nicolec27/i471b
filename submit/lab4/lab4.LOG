@@ -1,0 +1,174 @@
+Script started on 2023-09-21 15:02:27-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004hnchan14@n01-19:~/i471b/submit/lab4$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> (load "lab4-sol.scm)[22G[K")
+; open-input-file: cannot open input file
+;   path: /home/nchan14/i471b/submit/lab4/lab4-sol.scm
+;   system error: No such file or directory; errno=2
+; [,bt for context]
+> (exit)
+[?2004hnchan14@n01-19:~/i471b/submit/lab4$ gedit lab4-sol.scm&\[K
+[?2004l[1] 2258286
+[?2004hnchan14@n01-19:~/i471b/submit/lab4$ 
+(gedit:2258286): Gtk-[1;33mWARNING[0m **: [34m15:08:28.470[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method “Inhibit”
+ls
+[?2004llab4.LOG  lab4-sol.scm
+[?2004hnchan14@n01-19:~/i471b/submit/lab4$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> lo> l[K> [K(load "lab4-sol.scm)[22G[K")
+; lab4-sol.scm:1:0: define: bad syntax (multiple expressions after identifier)
+;   in: (define quadratic-roots a b c)
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:2:16: let: bad syntax (missing binding pairs or body)
+;   in: (let ((discriminant (- (* b b) (* 4 (* a c)))) (let ((x (sqrt
+;     discriminant)) (y (* 2 a))) (list (/ (+ (- b x) 0) y) (/ (- (- b x) 0)
+;     y)))))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:2:16: let: bad syntax (missing binding pairs or body)
+;   in: (let ((discriminant (- (* b b) (* 4 (* a c)))) (list (discriminant))))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:2:16: let: bad syntax (missing binding pairs or body)
+;   in: (let ((discriminant (- (* b b) (* 4 (* a c))))))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+> > (load "lab4-sol.scm")> (exit)[K> (+ (expt 2 (- 10 7)) (expt 2 (- 8 4)))> (exit)[K> (load "lab4-sol.scm")[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[7G[K[6G[K> (l[K> ([K> [K(quadratic [13G-roots a [21G[20G[K3 7 2)
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 25
+; [,bt for context]
+> > (quadratic-roots 3 7 2)
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 25
+; [,bt for context]
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 3
+; [,bt for context]
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 25
+; [,bt for context]
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+5
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+; lab4-sol.scm:2:22: let: bad syntax (not an identifier and expression for a
+;   binding)
+;   at: (discriminant sqrt ((- (* b b) (* 4 (* a c)))))
+;   in: (let ((discriminant sqrt ((- (* b b) (* 4 (* a c)))))) (discriminant))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:1:0: read-syntax: expected a `)` to close `(` [,bt for context]
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+5
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+'(5 3)
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+'(2 3)
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+'(-2 3)
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+'(-1/3 3)
+> > (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K> (quadratic-roots 3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 3 7 2)
+'(-1/3 -2)
+> > (quadratic-roots 3 7 2)[25G[K[24G[K[23G[22G[K[21G[20G[K5 6 1)
+'(-1/5 -1)
+> > (quadratic-roots 5 6 1)[25G[K[24G[K[23G[22G[K2 1)
+'(-1/5+2/5i -1/5-2/5i)
+> > (quadratic-roots 5 2 1)[20G[P [20G[1@1  2[22G 1)[K[22G- 1)[23G4 1) 1[25G)[K[25G2)[26G5)[27G/)[28G4)
+'(2+3/2i 2-3/2i)
+> > (quadratic-roots 1 -4 25/4)[20G5 2 1)[K[22G6 1)[20G3 7 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 1 -4 25/4)[28G)[K[27G)[K[26G)[K[25G)[K[24G)[K[23G)[K[22G)[K[21G)[K[20G)[K[20G0)[21G )[22G1)[23G )[24G2)
+; /: division by zero [,bt for context]
+> > (quadratic-roots 0 1 2)> (load "lab4-sol.scm")[K
+> > (load "lab4-sol.scm")> (quadratic-roots 0 1 2)
+; /: division by zero [,bt for context]
+> > (quadratic-roots 0 1 2)> (load "lab4-sol.scm")[K
+; lab4-sol.scm:2:8: if: missing an "else" expression
+;   in: (if (< a 0) ((quote error)))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:4:8: else: not allowed as an expression
+;   in: (else (let ((discriminant (- (* b b) (* 4 (* a c))))) (list (/ (- (- b
+;     (sqrt discriminant))) (* 2 a)) (/ (- (+ b (sqrt discriminant))) (* 2
+;     a)))))
+; [,bt for context]
+> > (load "lab4-sol.scm")> (quadratic-roots 0 1 2)[20G1 -4 25/4)[20G0 1 2)[K> (load "lab4-sol.scm")[K
+; lab4-sol.scm:4:8: else: not allowed as an expression
+;   in: (else (let ((discriminant (- (* b b) (* 4 (* a c))))) (list (/ (- (- b
+;     (sqrt discriminant))) (* 2 a)) (/ (- (+ b (sqrt discriminant))) (* 2
+;     a)))))
+; [,bt for context]
+> > (load "lab4-sol.scm")> (quadratic-roots 0 1 2)> (load "lab4-sol.scm")[K
+; lab4-sol.scm:5:8: else: not allowed as an expression
+;   in: (else (quote error))
+; [,bt for context]
+> > (load "lab4-sol.scm")> (quadratic-roots 0 1 2)> (load "lab4-sol.scm")[K
+; lab4-sol.scm:2:8: if: missing an "else" expression
+;   in: (if (> a 0) (let ((discriminant (- (* b b) (* 4 (* a c))))) (list (/ (-
+;     (- b (sqrt discriminant))) (* 2 a)) (/ (- (+ b (sqrt discriminant))) (* 2
+;     a)))))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:5:8: else: not allowed as an expression
+;   in: (else (quote (error)))
+; [,bt for context]
+> ,bt
+; lab4-sol.scm:5:8: else: not allowed as an expression
+;   in: (else (quote (error)))
+;   location...:
+;    lab4-sol.scm:5:8
+;   context...:
+;    /usr/share/racket/pkgs/xrepl-lib/xrepl/xrepl.rkt:1573:0
+;    body of top-level
+;    /usr/share/racket/pkgs/xrepl-lib/xrepl/xrepl.rkt:1573:0
+;    /usr/share/racket/collects/racket/repl.rkt:11:26
+> > ,bt> (load "lab4-sol.scm")
+; lab4-sol.scm:2:16: if: missing an "else" expression
+;   in: (if (< a 0) ((quote error)))
+; [,bt for context]
+> > > (load "lab4-sol.scm")
+; lab4-sol.scm:2:16: if: missing an "else" expression
+;   in: (if (< a 0) (quote error))
+; [,bt for context]
+> > (load "lab4-sol.scm")> ,bt[K> (load "lab4-sol.scm")
+; lab4-sol.scm:3:24: if: missing an "else" expression
+;   in: (if (< a 0) (quote error))
+; [,bt for context]
+> > (load "lab4-sol.scm")> ,bt[K> (load "lab4-sol.scm")
+; lab4-sol.scm:4:24: if: missing an "else" expression
+;   in: (if (< a 0) (quote error))
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:1:0: define: bad syntax (multiple expressions after identifier)
+;   in: (define quadratic-roots a b c)
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:1:0: define: bad syntax (multiple expressions after identifier)
+;   in: (define quadratic-roots a b c)
+; [,bt for context]
+> > (load "lab4-sol.scm")
+; lab4-sol.scm:1:0: define: bad syntax (multiple expressions after identifier)
+;   in: (define quadratic-roots a b c)
+; [,bt for context]
+> > (load "lab4-sol.scm")
+> > (load "lab4-sol.scm")> ,bt[K> (quadratic-roots 0 1 2)
+; /: division by zero [,bt for context]
+> 
+  exir[6G[Kt()
+#<procedure:exit>
+; readline-inp
