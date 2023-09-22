@@ -1,8 +1,9 @@
-(define (quadratic-roots a b c)
+(define (quadratic-roots a b c . d)
+	(let ((extract (if (null? d) sqrt(car d))))
 	(if (= a 0)
 		'error
 		(let ((discriminant (- (* b b) (* 4 (* a c)))))
-			(list(/ (-(- b(sqrt discriminant))) (* 2 a)) (/ (-(+ b(sqrt discriminant))) (* 2 a))))))
+			(list(/ (-(- b(extract discriminant))) (* 2 a)) (/ (-(+ b(extract discriminant))) (* 2 a)))))))
 			
 (define (cmp-gt ls1 ls2)
 	(if (null? ls1)
@@ -30,3 +31,12 @@
 		'()
 		(cons (> (car ls1) v)
 			(greater-than (cdr ls1) v)))))
+
+(define (my-sqrt n)
+ 	(letrec ([aux-sqrt
+            (lambda (guess)
+              	(if (> (/ (abs (- (* guess guess) n)) n) 0.0001)
+                  	(aux-sqrt (/ (+ guess (/ n guess)) 2))
+                  	guess))])
+    	(aux-sqrt 1.0)))
+
