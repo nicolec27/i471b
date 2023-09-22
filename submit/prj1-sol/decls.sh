@@ -7,3 +7,4 @@ dir=`dirname $0`
 #so that this script can be run from any directory.
 
 
+$dir/ast.py
