@@ -1,0 +1,1387 @@
+Script started on 2023-09-28 15:20:49-04:00 [TERM="xterm-256color" TTY="/dev/pts/25" COLUMNS="44" LINES="9"]
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ [Knchan14@remote00:~/i471b/submit/lab5$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> lo> l[K> [K(load lab5-s[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K"lab5-sol.scm")
+> (sum-lengths '())
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (sum lengt[12G[K[11G[K[10G[K[9G[K[8G[K[7G-lengths '(1 2))
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (exit)
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ racketscript -a lab5.LOGgit push -u origin lab5[5Pscript -a lab5.LOG[12Pracket
+[?2004lWelcome to Racket v8.7 [cs].
+> > (exit)> (sum-lengths '(1 2))[18G))[K> (load "lab5-sol.scm")
+; lab5-sol.scm:13:31: let-length: unbound identifier
+;   in: let-length
+; [,bt for context]
+> > (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (exit)[K> (sum-lengths '(1 2))[18G))[K[18G1 2))[18G))[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (check-equal? (sum-lengths '()) 0)> ([14P[19G)[K> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (exit)[K[8G[K[7G[K[6G[K> (e[K> ([K> [K(check-equal? (sum-lengths '()) 0)
+; check-equal?: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > > (check-equal? (sum-lengths '()) 0)> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)
+; check-equal?: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (check-equal? (sum-lengths '()) 0)> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)> ([14P[19G)[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> 
+[1]+  Stopped                 racket
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> > (exit)> (sum-lengths '(1 2))
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '(1 2))> (exit)[K> (sum-lengths '())> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '(1 2))[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '(1 2))> (load "lab5-sol.scm")
+; lab5-sol.scm:7:2: if: missing an "else" expression
+;   in: (if null? ls)
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:7:2: if: missing an "else" expression
+;   in: (if null? ls)
+; [,bt for context]
+> > (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '(1 2))[K> (exit)[K> (sum-lengths '(1 2))> (load "lab5-sol.scm")> (sum-lengths '(1 2))[K> (exit)[K> (sum-lengths '())
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (check-equal? (sum-lengths '()) 0)
+; check-equal?: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (check-equal? (sum-lengths '()) 0)> ([14P[19G)[K> (load "lab5-sol.scm")
+; lab5-sol.scm:17:1: test: unbound identifier
+;   in: test
+; [,bt for context]
+> > (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (c[K> ([K> [K> (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (c[K> ([Ktest)
+; test: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (test)> (load "lab5-sol.scm")
+; lab5-sol.scm:17:16: test-sum-lengths: unbound identifier
+;   in: test-sum-lengths
+; [,bt for context]
+> > (load "lab5-sol.scm")
+> sl> s[K> [K(sl-test1)
+; sl-test1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sl-test1)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sl-test1)[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K> (test)> (check-equal? (sum-lengths '()) 0)
+; check-equal?: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (check-equal? (sum-lengths '()) 0)> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (check-equal? (sum-lengths '()) 0)> (sl-test1)[K> ([3Ptest)[K> ([3@sl-test1)
+; sl-test1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sl-test1)> (load "lab5-sol.scm")
+> fa> f[K> [K(fact 4)
+; fact: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (exit)
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ ls
+[?2004llab5.LOG  lab5-sol.scm
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ racket
+[?2004lWelcome to Racket v8.7 [cs].
+> (load lab5-si[15G[Kol.scm[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[7G[K[6G[K> (l[K> ([K> [K> (exit)> (fact 4)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (exit)[K> (fact 4)> (sl-test1)> (fact 4)[K
+24
+> > (fact 4)
+24
+> > (fact 4)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (fact 4)[K
+24
+> > (fact 4)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (fact 4)[K
+24
+> > > (fact 4)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (fact 4)[K> (exit)[K> (sl-test1)> (check-equal? (sum-lengths '()) 0)
+; check-equal?: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (check-equal? (sum-lengths '()) 0)) 0)[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (c[K> ([K> [K> (load "lab5-sol.scm")> (fact 4)[K> (exit)[K> (sl-test1)> ([3Ptest)[K> (sum-lengths '())[18G1 2))[18G))[K
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> ([14@check-equal? ([33G) 0)> (load "lab5-sol.scm")[K> (fact 4)[K
+24
+> > (fact 4)> (sum-lengths '())
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (fact 4)[K> (check-equal? (sum-lengths '()) 0)> (load "lab5-sol.scm")[K
+; lab5-sol.scm:11:2: define: not an identifier, identifier with default, or
+;   keyword for procedure argument
+;   at: (if (null? ls) 0 (+ (length (car ls)) (sum-lengths (cdr ls))))
+;   in: (define (sum-lengths ls (if (null? ls) 0 (+ (length (car ls))
+;     (sum-lengths (cdr ls))))))
+; [,bt for context]
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (fact 4)[K> (check-equal? (sum-lengths '()) 0)> (exit)[K> (sl-test1)> ([3Ptest)[K> (sum-lengths '(1 2))> (quadratic-roots 1 -4 25/4)[20G3 7 2 my-sqrt)[20G1 -4 25/4)[K> (sum-lengths '(1 2))[K> (test)[K> ([3@sl-test1)> (exit)[K> (check-equal? (sum-lengths '()) 0)> (fact 4)[K> (sum-lengths '())> (load "lab5-sol.scm")
+; lab5-sol.scm:5:13: n: unbound identifier
+;   in: n
+; [,bt for context]
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (fact 4)[K> (check-equal? (sum-lengths '()) 0)> (exit)[K> (sl-test1)> (exit)[K> (check-equal? (sum-lengths '()) 0)> (fact 4)[K> (sum-lengths '())> (load "lab5-sol.scm")> [K> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (fact 4)[K
+24
+> > (fact 4)> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (fact 4)[K> (sum-lengths '())
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '())> (load "lab5-sol.scm")> (sum-lengths '())[K[19G[K[18G[K[17G[K[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K> (load "lab5-sol.scm")> (fact 4)[K> (load "lab5-sol.scm")
+; lab5-sol.scm:13:15: sum-length: unbound identifier
+;   in: sum-length
+; [,bt for context]
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (fact 4)[K> (check-equal? (sum-lengths '()) 0)> (exit)[K> (sl-test1)> ([3Ptest)[K> (sum-lengths '(1 2))> (quadratic-roots 1 -4 25/4)[20G3 7 2 my-sqrt)[20G1 -4 25/4)[K> (sum-lengths '(1 2))[K> (test)[K> ([3@sl-test1)> (exit)[K> (check-equal? (sum-lengths '()) 0)> (fact 4)[K> (sum-lengths '())> (load "lab5-sol.scm")> [K> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '())[K> (fact 4)[K> (sum-lengths '())[18G1))
+; sum-lengths: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (sum-lengths '(1))> (load "lab5-sol.scm")
+> > (load "lab5-sol.scm")> (sum-lengths '(1))[Km-lengths '(1))[20G[K[19G[K[18G[K[17G[K[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K(sum-lengths '(1))[20G[K[19G[K[18G[K[17G[K[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K(my-length '(a b (1 2) (a b c) d))
+; my-length: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (my-length '(a b (1 2) (a b c) d))> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (my-length '(a b (1 2) (a b c) d))
+; my-length: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (my-length '(a b (1 2) (a b c) d))> (load "lab5-sol.scm")[K
+> > (load "lab5-sol.scm")> (my-length '(a b (1 2) (a b c) d))
+5
+> > (my-length '(a b (1 2) (a b c) d))> [K> (my-length '(a b (1 2) (a b c) d))> (load "lab5-sol.scm")[K
+--------------------
+; ERROR [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:11:0
+
+check-equal?: contract violation
+  expected: (or/c #f string?)
+  given: 0
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:21:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:22:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:31:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:32:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:33:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:46:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:47:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:56:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:57:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:58:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:68:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:69:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:70:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:78:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:79:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:80:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:89:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:90:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:21:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:22:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:31:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:32:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:33:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:46:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:47:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:56:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:57:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:58:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:68:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:69:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:70:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:78:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:79:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:80:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:89:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:90:0
+actual:     0
+expected:   2
+--------------------
+> (exit)
+[?2004hnchan14@remote00:~/i471b/submit/lab5$ clear
+[?2004l[H[2J[3J[?2004hnchan14@remote00:~/i471b/submit/lab5$ rakcet[K[K[K[K[Kacket
+[?2004lWelcome to Racket v8.7 [cs].
+> > (exit)> (load "lab5-sol.scm")
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:21:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:22:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:31:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:32:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:33:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:46:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:47:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:56:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:57:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:58:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:68:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:69:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:70:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:78:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:79:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:80:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:89:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:90:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+--------------------
+exercise1 tests passed; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:22:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:23:0
+actual:     0
+expected:   4
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:32:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:33:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:36:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:47:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:48:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:57:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:58:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:60:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:69:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:70:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:71:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:79:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:80:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:81:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:90:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:91:0
+actual:     0
+expected:   2
+--------------------
+
+> (sum-lenghts> (sum-lenght[13G[K[12G[Kths '(([18G[K[17G[K[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K(sum-lengths '((1 2) (2 1)))
+4
+> (sum-lengths '((1 ((2)) 3) ((2 1))))
+4
+> > (sum-lengths '((1 ((2)) 3) ((2 1))))[21G2) (2 1)))[K> (load "lab5-sol.scm")[K> (exit)[K> (load "lab5-sol.scm")
+; lab5-sol.scm:16:11: letrec: bad syntax (not an identifier and expression for
+;   a binding)
+;   at: (aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+ (length
+;     (car ls)) sum))))
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+
+;     (length (car ls)) sum))))) (aux-fact sum))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:16:11: letrec: bad syntax (not an identifier and expression for
+;   a binding)
+;   at: (aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+ (length
+;     (car ls)) sum))))
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+
+;     (length (car ls)) sum))))) (aux-fact ls 0))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:16:2: letrec: bad syntax (missing body)
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum (cdr ls) (+ (length (car
+;     ls)) sum)))))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:16:2: letrec: bad syntax (missing body)
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum (cdr ls) (+ (length (car
+;     ls)) sum)))))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:16:2: letrec: bad syntax (missing body)
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum ((cdr ls) (+ (length
+;     (car ls)) sum))))))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:18:6: if: bad syntax
+;   in: (if (null? ls) sum (aux-fact (cdr ls) (+ (length (car ls)) sum)) sum)
+; [,bt for context]
+> > (load "lab5-sol.scm")> (sum-lengths '((1 ((2)) 3) ((2 1))))> (load "lab5-sol.scm")[K
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:36:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:37:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:38:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:49:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:50:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:60:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:61:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:62:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:71:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:72:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:73:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:81:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:82:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:83:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:92:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:93:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+; lab5-sol.scm:16:11: letrec: bad syntax (not an identifier and expression for
+;   a binding)
+;   at: (aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+ (length
+;     (car ls)) sum))))
+;   in: (letrec ((aux-fact (ls sum) (if (null? ls) sum (aux-fact (cdr ls) (+
+;     (length (car ls)) sum))))) (aux-fact ls 0))
+; [,bt for context]
+> > (load "lab5-sol.scm")
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:34:0
+actual:     0
+expected:   5
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:35:0
+actual:     0
+expected:   11
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:36:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:37:0
+actual:     0
+expected:   -1
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:38:0
+actual:     0
+expected:   -6
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:49:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:50:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:59:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:60:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:61:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:62:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:71:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:72:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:73:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:81:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:82:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:83:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:92:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:93:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:53:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:54:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:63:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:64:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:65:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:66:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:75:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:76:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:77:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:85:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:86:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:87:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:96:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:97:0
+actual:     0
+expected:   2
+--------------------
+> (poly-eval -1 '(5 3 -3 5))
+-6
+> > (poly-eval -1 '(5 3 -3 5))> (load "lab5-sol.scm")[K
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:63:0
+actual:     0
+expected:   '(8 15)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:64:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:65:0
+actual:     0
+expected:   '(2 3)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:66:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:75:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:76:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:77:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:85:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:86:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:87:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:96:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:97:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:75:0
+actual:     0
+expected:   '(#f #f #t #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:76:0
+actual:     0
+expected:   '(#f #t #f #t)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:77:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:85:0
+actual:     0
+expected:   '(3 4)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:86:0
+actual:     0
+expected:   '(2 1)
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:87:0
+actual:     0
+expected:   '()
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:96:0
+actual:     0
+expected:   2
+--------------------
+--------------------
+; FAILURE [,bt for context]
+name:       check-equal?
+location:   lab5-sol.scm:97:0
+actual:     0
+expected:   2
+--------------------
+> > (load "lab5-sol.scm")
+--------------------
+; ERROR [,bt for c

@@ -1,13 +1,10 @@
-#!/usr/bin/env racket
-
-#lang racket
 (require rackunit)
 
-;;Exercise 1
-;;Given a proper-list list of proper-lists, return the sum of the
-;;lengths of all the top-level contained lists.
 (define (sum-lengths ls)
-  0)
+  (if (null? ls) 0
+    (+ (length (car ls))
+      (sum-lengths (cdr ls)))))
+
 
 (check-equal? (sum-lengths '()) 0)
 (check-equal? (sum-lengths '(() ())) 0)
@@ -16,7 +13,11 @@
 
 ;;Repeat previous exercise where all recursion is tail-recursive
 (define (sum-lengths-tr ls)
-  0)
+  (letrec ([aux-fact 
+    (lambda (ls sum)
+      (if (null? ls) sum
+        (aux-fact (cdr ls) (+ (length (car ls)) sum))))])
+    (aux-fact ls 0))) 
 
 (check-equal? (sum-lengths-tr '()) 0)
 (check-equal? (sum-lengths-tr '(() ())) 0)
@@ -27,7 +28,11 @@
 ;; coeffs[0] + coeffs[1]*x + coeffs[2]*x^2 + ...
 ;; all recursion should be tail-recursive
 (define (poly-eval x coeffs)
-  0)
+  (letrec ([aux-fact 
+    (lambda (coeffs sum xPow)
+      (if (null? coeffs) sum
+        (aux-fact (cdr coeffs) (+ (* xPow (car coeffs)) sum) (* xPow x))))])
+    (aux-fact coeffs 0 1)))
 
 (check-equal? (poly-eval 2 '()) 0)
 (check-equal? (poly-eval 2 '(5)) 5)
@@ -43,7 +48,7 @@
 ;;elements of list ls1 and ls2.
 ;;Cannot use recursion
 (define (ls-prod ls1 ls2)
-  0)
+  (map * ls1 ls2))
 
 (check-equal? (ls-prod '(2 3) '(4 5)) '(8 15))
 (check-equal? (ls-prod '() '()) '())
@@ -53,7 +58,7 @@
 ;;applied to individual elements of ls1 and ls2.
 ;;Cannot use recursion
 (define (ls-f ls1 ls2 f)
-  0)
+  (map f ls1 ls2))
 
 (check-equal? (ls-f '(2 3) '(4 5) (lambda (a b) (* a b))) '(8 15))
 (check-equal? (ls-f '(2 3) '(4 6) (lambda (a b) (- b a))) '(2 3))
@@ -65,7 +70,7 @@
 ;;in ls is greater-than val (which should default to 0).
 ;;Cannot use recursion.
 (define (greater-than ls (val 0))
-  0)
+  (map (lambda (n) (> n val)) ls))
 
 (check-equal? (greater-than '(1 2 3 4) 2) '(#f #f #t #t))
 (check-equal? (greater-than '(-1 2 0 1)) '(#f #t #f #t))
@@ -75,7 +80,7 @@
 ;;of ls which are greater-than val (which should default to 0).
 ;;Cannot use recursion.
 (define (greater-thans ls (val 0))
-  0)
+  (filter (lambda (n) (> n val)) ls))
 
 (check-equal? (greater-thans '(1 2 3 4) 2) '(3 4))
 (check-equal? (greater-thans '(-1 2 0 1)) '(2 1))
@@ -86,7 +91,7 @@
 ;;of ls which are greater-than val (which should default to 0).
 ;;Must use foldl; cannot use recursion or filter.
 (define (count-greater-thans ls (val 0))
-  0)
+  (foldl (lambda (a acc) (+ acc (if (> a val) 1 0))) 0 ls))
 
 (check-equal? (count-greater-thans '(1 2 3 4) 2) 2)
 (check-equal? (count-greater-thans '(-1 2 0 1)) 2)
