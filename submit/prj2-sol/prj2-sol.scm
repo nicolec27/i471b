@@ -22,8 +22,19 @@
 ;; *Hint*: use number? and equal? along with list accessor functions
 
 (define (eval-expr1 expr)
- 0)   
-	 
+	(cond ((number? expr) expr)
+		((list? expr)
+			(if (equal? (car expr) 'add)
+				(+ (eval-expr1 (cadr expr)) (eval-expr1 (caddr expr)))
+			(if (equal? (car expr) 'sub)
+				(- (eval-expr1 (cadr expr)) (eval-expr1 (caddr expr)))
+			(if (equal? (car expr) 'mul)
+				(* (eval-expr1 (cadr expr)) (eval-expr1 (caddr expr)))
+			(if (equal? (car expr) 'uminus)
+				(- (eval-expr1 (cadr expr)))
+			('error))))))
+	   (else 'error)))
+
 (check-equal? (eval-expr1 42) 42)
 (check-equal? (eval-expr1 '(add 20 22)) 42)
 (check-equal? (eval-expr1 '(mul 14 3)) 42)
@@ -38,7 +49,18 @@
 ;;
 ;; *Hint*: use list to build lists
 (define (compile-expr1 expr)
- 0)
+	(cond ((number? expr) expr)
+		((list? expr)
+			(if (equal? (car expr) 'add)
+				(list '+ (compile-expr1 (cadr expr)) (compile-expr1 (caddr expr)))
+			(if (equal? (car expr) 'sub)
+				(list '- (compile-expr1 (cadr expr)) (compile-expr1 (caddr expr)))
+			(if (equal? (car expr) 'mul)
+				(list '* (compile-expr1 (cadr expr)) (compile-expr1 (caddr expr)))
+			(if (equal? (car expr) 'uminus)
+				(list '- (compile-expr1 (cadr expr)))
+			('error))))))
+	   (else 'error)))
 
 (check-equal? (compile-expr1 42) 42)
 (check-equal? (compile-expr1 '(add 20 22)) '(+ 20 22))
@@ -86,8 +108,23 @@
 ;; *Hint*: use assoc and symbol?.
 
 (define (eval-expr2 expr env)
- 0)
-   
+  	(cond ((number? expr) expr)
+		((symbol? expr)       
+         	(let ((x (assoc expr env)))
+           		(if x (cadr x)
+               	(error "Undefined"))))
+        ((list? expr)
+        (if (equal? (car expr) 'add)
+            (+ (eval-expr2 (cadr expr) env) (eval-expr2 (caddr expr) env))
+        (if (equal? (car expr) 'sub)
+            (- (eval-expr2 (cadr expr) env) (eval-expr2 (caddr expr) env))
+        (if (equal? (car expr) 'mul)
+            (* (eval-expr2 (cadr expr) env) (eval-expr2 (caddr expr) env))
+        (if (equal? (car expr) 'uminus)
+            (- (eval-expr2 (cadr expr) env))
+        ('error))))))))
+
+		  
 (check-equal? (eval-expr2 42 '()) 42)
 (check-equal? (eval-expr2 '(add 20 22) '()) 42)
 (check-equal? (eval-expr2 '(mul 14 3) '()) 42)
@@ -108,9 +145,21 @@
 ;; similar to compile-expr1.  Should merely wrap the compiled expr
 ;; in a let; it should not attempt to lookup symbols in env.
 (define (compile-expr2 expr env)
-  0)
+  	(list 'let env (aux-fact expr env)))
 
-
+(define (aux-fact expr env)
+  	(if (number? expr) expr
+	(if (symbol? expr) expr
+	(if (equal? (car expr) 'add)
+		(list '+ (aux-fact (cadr expr) env) (aux-fact (caddr expr) env))
+	(if (equal? (car expr) 'sub)
+		(list '- (aux-fact (cadr expr) env) (aux-fact (caddr expr) env))
+	(if (equal? (car expr) 'mul)
+		(list '* (aux-fact (cadr expr) env) (aux-fact (caddr expr) env))
+	(if (equal? (car expr) 'uminus)
+		(list '- (aux-fact (cadr expr) env))
+	('error))))))))
+ 
 (check-equal? (compile-expr2 'a '((a 42))) '(let ((a 42)) a))
 (check-equal? (compile-expr2 '(add a a) '((a 22))) '(let ((a 22)) (+ a a)))
 (check-equal? (compile-expr2 '(add a b) '((a 22))) '(let ((a 22)) (+ a b)))
@@ -131,13 +180,3 @@
 (check-equal? (eval-in-fn (compile-expr2 '(add (mul a b) (mul (uminus c) 3))
 					 '((a 9) (b 4) (c 2))))
 	      30)
-
-
-
-
-
-
-
-
-
-
