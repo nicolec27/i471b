@@ -1,0 +1,105 @@
+(require rackunit)
+
+(define (sum-lengths ls)
+  (if (null? ls) 0
+    (+ (length (car ls))
+      (sum-lengths (cdr ls)))))
+
+
+(check-equal? (sum-lengths '()) 0)
+(check-equal? (sum-lengths '(() ())) 0)
+(check-equal? (sum-lengths '((1 2) (2 1))) 4)
+(check-equal? (sum-lengths '((1 ((2)) 3) ((2 1)))) 4)
+
+;;Repeat previous exercise where all recursion is tail-recursive
+(define (sum-lengths-tr ls)
+  (letrec ([aux-fact 
+    (lambda (ls sum)
+      (if (null? ls) sum
+        (aux-fact (cdr ls) (+ (length (car ls)) sum))))])
+    (aux-fact ls 0))) 
+
+(check-equal? (sum-lengths-tr '()) 0)
+(check-equal? (sum-lengths-tr '(() ())) 0)
+(check-equal? (sum-lengths-tr '((1 2) (2 1))) 4)
+(check-equal? (sum-lengths-tr '((1 ((2)) 3) ((2 1)))) 4)
+
+;;Evaluate polynomial given by list coeffs at x; i.e. return
+;; coeffs[0] + coeffs[1]*x + coeffs[2]*x^2 + ...
+;; all recursion should be tail-recursive
+(define (poly-eval x coeffs)
+  (letrec ([aux-fact 
+    (lambda (coeffs sum xPow)
+      (if (null? coeffs) sum
+        (aux-fact (cdr coeffs) (+ (* xPow (car coeffs)) sum) (* xPow x))))])
+    (aux-fact coeffs 0 1)))
+
+(check-equal? (poly-eval 2 '()) 0)
+(check-equal? (poly-eval 2 '(5)) 5)
+(check-equal? (poly-eval 2 '(5 3)) 11)
+(check-equal? (poly-eval 2 '(5 3 -3)) -1)
+(check-equal? (poly-eval -1 '(5 3 -3)) -1)
+(check-equal? (poly-eval -1 '(5 3 -3 5)) -6)
+
+;;Exercise 2
+
+;;(ls-prod ls1 ls2): given proper lists of numbers ls1 and ls2 having
+;;the same length, return list containing product of individual
+;;elements of list ls1 and ls2.
+;;Cannot use recursion
+(define (ls-prod ls1 ls2)
+  (map * ls1 ls2))
+
+(check-equal? (ls-prod '(2 3) '(4 5)) '(8 15))
+(check-equal? (ls-prod '() '()) '())
+
+;;(ls-f ls1 ls2 f): given proper lists of numbers ls1 and ls2 having
+;;the same length and a binary function f, return list containing f
+;;applied to individual elements of ls1 and ls2.
+;;Cannot use recursion
+(define (ls-f ls1 ls2 f)
+  (map f ls1 ls2))
+
+(check-equal? (ls-f '(2 3) '(4 5) (lambda (a b) (* a b))) '(8 15))
+(check-equal? (ls-f '(2 3) '(4 6) (lambda (a b) (- b a))) '(2 3))
+(check-equal? (ls-f '(2 3) '(4 6) (lambda (a b) a)) '(2 3))
+(check-equal? (ls-f '() '() (lambda (a b) a)) '())
+
+;;(greater-than ls val) should return a boolean list containing the same
+;;# of elements as ls, with an entry being #t iff the corresponding element
+;;in ls is greater-than val (which should default to 0).
+;;Cannot use recursion.
+(define (greater-than ls (val 0))
+  (map (lambda (n) (> n val)) ls))
+
+(check-equal? (greater-than '(1 2 3 4) 2) '(#f #f #t #t))
+(check-equal? (greater-than '(-1 2 0 1)) '(#f #t #f #t))
+(check-equal? (greater-than '() 3) '())
+
+;;(greater-thans ls val) should return a list containing those elements
+;;of ls which are greater-than val (which should default to 0).
+;;Cannot use recursion.
+(define (greater-thans ls (val 0))
+  (filter (lambda (n) (> n val)) ls))
+
+(check-equal? (greater-thans '(1 2 3 4) 2) '(3 4))
+(check-equal? (greater-thans '(-1 2 0 1)) '(2 1))
+(check-equal? (greater-thans '() 3) '())
+
+
+;;(count-greater-thans ls val) should return the # of elements
+;;of ls which are greater-than val (which should default to 0).
+;;Must use foldl; cannot use recursion or filter.
+(define (count-greater-thans ls (val 0))
+  (foldl (lambda (a acc) (+ acc (if (> a val) 1 0))) 0 ls))
+
+(check-equal? (count-greater-thans '(1 2 3 4) 2) 2)
+(check-equal? (count-greater-thans '(-1 2 0 1)) 2)
+(check-equal? (count-greater-thans '() 3) 0)
+
+
+
+
+
+
+
