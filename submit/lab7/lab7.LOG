@@ -96,4 +96,79 @@ Ok, one module loaded.
 Ok, one module loaded.
 [?1h=ghci> cartesianProduct [1..4] [2..4]E[?1l>[(1,2),(1,3),(1,4),(2,2),(2,3),(2,4),(3,2),(3,3),(3,4),(4,2),(4,3),(4,4)]
 [?1h=ghci> cartesianProductIf [1..4] [2..4] (>)E[?1l>[(3,2),(4,2),(4,3)]
-[?1h=ghci> let pairs = [(x, x^2) | x <- [1..10]]3 x^2) | x <- [1..10]][21D x^2) | x <- [1..10]][K[21D[C3x^2) | x <- [1..10]][20D[C[C[C+) | x <- [1..10]][17D2) | x <- [1..10]][17Dx) | x <- [1..10]][17D+) | x <- [1..10]][17D1) | x <- [1..10]][17D +2x+1) | x <- [1..10]][22D[C 2x+1) | x <- [1..10]][21D[C[C +1) | x <- [1..10]][19D[C 1) | x <- [1..10]][18D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D[C[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[C[C[C[C[C[C
+[?1h=ghci> let pairs = [(x, x^2) | x <- [1..10]]3 x^2) | x <- [1..10]][21D x^2) | x <- [1..10]][K[21D[C3x^2) | x <- [1..10]][20D[C[C[C+) | x <- [1..10]][17D2) | x <- [1..10]][17Dx) | x <- [1..10]][17D+) | x <- [1..10]][17D1) | x <- [1..10]][17D +2x+1) | x <- [1..10]][22D[C 2x+1) | x <- [1..10]][21D[C[C +1) | x <- [1..10]][19D[C 1) | x <- [1..10]][18D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D[C[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CE[?1l>
+[;1m<interactive>:37:1: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Non type-variable argument in the constraint: Num (t -> b)
+      (Use FlexibleContexts to permit this)
+    • When checking the inferred type
+        it :: forall {t} {b}.
+              (Num t, Num b, Num (t -> b), Enum t) =>
+              [(t, b)][0m[0m
+[?1h=ghci> [(x, 3x^2 + 2x + 1) | x <- [1..10]]l[(x, 3x^2 + 2x + 1) | x <- [1..10]][35De[(x, 3x^2 + 2x + 1) | x <- [1..10]][35Dt[(x, 3x^2 + 2x + 1) | x <- [1..10]][35D [(x, 3x^2 + 2x + 1) | x <- [1..10]][35Dr[(x, 3x^2 + 2x + 1) | x <- [1..10]][35De[(x, 3x^2 + 2x + 1) | x <- [1..10]][35Du[(x, 3x^2 + 2x + 1) | x <- [1..10]][35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35Ds[(x, 3x^2 + 2x + 1) | x <- [1..10]][35Du[(x, 3x^2 + 2x + 1) | x <- [1..10]][35Dl[(x, 3x^2 + 2x + 1) | x <- [1..10]][35Dt[(x, 3x^2 + 2x + 1) | x <- [1..10]][35D [(x, 3x^2 + 2x + 1) | x <- [1..10]][35D=[(x, 3x^2 + 2x + 1) | x <- [1..10]][35D [(x, 3x^2 + 2x + 1) | x <- [1..10]][35DE[?1l>
+[;1m<interactive>:38:5: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Non type-variable argument in the constraint: Num (t -> b)
+      (Use FlexibleContexts to permit this)
+    • When checking the inferred type
+        result :: forall {t} {b}.
+                  (Num t, Num b, Num (t -> b), Enum t) =>
+                  [(t, b)][0m[0m
+[?1h=ghci> let result = [(x, 3x^2 + 2x + 1) | x <- [1..10]][48D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35DcartesianProductIf [1..4] [2..4] (>)[20D [1..4] [2..4][K[30D:r[KE[?1l>Ok, one module loaded.
+[?1h=ghci> :r[2Dlet result = [(x, 3x^2 + 2x + 1) | x <- [1..10]][C[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CE[?1l>
+[;1m<interactive>:40:1: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Non type-variable argument in the constraint: Num (t -> b)
+      (Use FlexibleContexts to permit this)
+    • When checking the inferred type
+        it :: forall {t} {b}.
+              (Num t, Num b, Num (t -> b), Enum t) =>
+              [(t, b)][0m[0m
+[?1h=ghci> [(x, 3x^2 + 2x + 1) | x <- [1..10]] ;; [K[K[K;;[K[K:: [{[K(Integer, Integer)]E[?1l>
+[;1m<interactive>:41:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num (Integer -> Integer))
+        arising from the literal ‘3’
+        (maybe you haven't applied a function to enough arguments?)
+    • In the expression: 3
+      In the first argument of ‘(^)’, namely ‘3 x’
+      In the first argument of ‘(+)’, namely ‘3 x ^ 2’[0m[0m
+[?1h=ghci> [(x, 3x^2 + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)](x^2 + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)][53D[C[C[C) + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)][50DE[?1l>
+[;1m<interactive>:42:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num (Integer -> Integer))
+        arising from the literal ‘3’
+        (maybe you haven't applied a function to enough arguments?)
+    • In the expression: 3
+      In the first argument of ‘(+)’, namely ‘3 (x ^ 2)’
+      In the first argument of ‘(+)’, namely ‘3 (x ^ 2) + 2 x’[0m[0m
+[?1h=ghci> [(x, 3(x^2) + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)][K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KE[?1l>
+[;1m<interactive>:43:1: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Non type-variable argument in the constraint: Num (t -> b)
+      (Use FlexibleContexts to permit this)
+    • When checking the inferred type
+        it :: forall {t} {b}.
+              (Num t, Num b, Num (t -> b), Enum t) =>
+              [(t, b)][0m[0m
+[?1h=ghci> [(x, 3(x^2) + 2x + 1) | x <- [1..10]][C[C[C[C*x + 1) | x <- [1..10]][22D[C[C[C + 2*x + 1) | x <- [1..10]][K[27D + 2*x + 1) | x <- [1..10]][K[27D + 2*x + 1) | x <- [1..10]][K[27D + 2*x + 1) | x <- [1..10]][K[27D + 2*x + 1) | x <- [1..10]][K[27D  + 2*x + 1) | x <- [1..10]][27D* + 2*x + 1) | x <- [1..10]][27D  + 2*x + 1) | x <- [1..10]][27Dx + 2*x + 1) | x <- [1..10]][27D^ + 2*x + 1) | x <- [1..10]][27D2 + 2*x + 1) | x <- [1..10]][27D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C *x + 1) | x <- [1..10]][23D[C x + 1) | x <- [1..10]][22D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[41D[K[(x, 3 * x^2 + 2 * x + 1) | x <- [1..10]](3 * x^2 + 2 * x + 1) | x <- [1..10]][36D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)) | x <- [1..10]][17DE[?1l>[(1,6),(2,17),(3,34),(4,57),(5,86),(6,121),(7,162),(8,209),(9,262),(10,321)]
+[?1h=ghci> [(x, (3 * x^2 + 2 * x + 1)) | x <- [1..10]]\[K[K, (3 * x^2 + 2 * x + 1) ' rem' 3 == 0]E[?1l>
+[;1m<interactive>:45:67: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Syntax error on 'rem'
+      Perhaps you intended to use TemplateHaskell or TemplateHaskellQuotes
+    • In the Template Haskell quotation 'rem'[0m[0m
+[?1h=ghci> [(x, (3 * x^2 + 2 * x + 1)) | x <- [1..10], (3 * x^2 + 2 * x + 1) ' rem' 3 == 0] 3 == 0][K[8D` 3 == 0][8D[A[72C[C[C[C[C[C[C[CE[A[72CE[A[72Cr em` 3 == 0][K[A[72C` rem` 3 == 0][12DE[?1l>[(1,6),(4,57),(7,162),(10,321)]
+[?1h=ghci> [(x, (3 * x^2 + 2 * x + 1)) | x <- [1..10], (3 * x^2 + 2 * x + 1) ` rem` 3 == 0][A[72C' rem' 3 == 0][A[48C][KE[K[A[49C[38D3(x^2) + 2x + 1) | x <- [1..10]][K :: [(Integer, Integer)][55Dx^2 + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)][K[53D(x^2) + 2x + 1) | x <- [1..10]] :: [(Integer, Integer)][24D[K[32D(3 * x^2 + 2 * x + 1)) | x <- [1..10]], (3 * x^2 + 2 * x + 1) ' rem' 3 == 0][A[72C` rem` 3 == 0][A[6C[KE[K[A[6C:rE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> oddEvenPairs 5E[?1l>[(1,2),(1,4),(3,2),(3,4),(5,2),(5,4)]
+[?1h=ghci> oddEvenPairs 7E[?1l>[(1,2),(1,4),(1,6),(3,2),(3,4),(3,6),(5,2),(5,4),(5,6),(7,2),(7,4),(7,6)]
+[?1h=ghci> ghci> qE[?1l>
+[;1m<interactive>:50:1: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m Variable not in scope: q[0m[0m
+[?1h=ghci> E[?1l>[?1h=ghci> 
+[1]+  Stopped                 ghci GHC REPL
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ [Knchan14@remote02:~/i471b/submit/lab7$ cd ~/i471b/submit/lab7
+[?2004l[?2004hnchan14@remote02:~/i471b/submit/lab7$ git ad [Kd .
+[?2004l[?2004hnchan14@remote02:~/i471b/submit/lab7$ git commit -m 'completed lab7'
+[?2004l[lab7 ac4291e] completed lab7
+ 2 files changed, 144 insertions(+)
+ create mode 100644 submit/lab7/lab7-sol.hs
+ create mode 100644 submit/lab7/lab7.LOG
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ git push
+[?2004lEnumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compr
