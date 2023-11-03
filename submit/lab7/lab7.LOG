@@ -1,0 +1,99 @@
+Script started on 2023-11-02 22:25:24-04:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="127" LINES="11"]
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ [7mghci  --start GHC REPL[27mghci  --start GHC REPL
+[?2004lGHCi, version 9.0.2: https://www.haskell.org/ghc/  :? for help
+ghc: unrecognised flag: --start
+
+Usage: For basic information, try the `--help' option.
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ [7mghci  --start GHC REPL[27mghci  --start GHC REPL
+[?2004lGHCi, version 9.0.2: https://www.haskell.org/ghc/  :? for help
+ghc: unrecognised flag: --start
+
+Usage: For basic information, try the `--help' option.
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ :/
+[?2004lbash: :/: No such file or directory
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ :?
+[?2004lbash: :?: command not found
+[?2004hnchan14@remote02:~/i471b/submit/lab7$ gch[K[Khci GHC REPL
+[?2004lGHCi, version 9.0.2: https://www.haskell.org/ghc/  :? for help
+
+[;1m<no location info>: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m module ‘GHC’ cannot be found locally[0m[0m
+
+[;1m<no location info>: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m module ‘REPL’ cannot be found locally[0m[0m
+Failed, no modules loaded.
+[?1h=ghci> ghci> ghci> :l "lab7-sol.hs"E[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> :rE[?1l>Ok, one module loaded.
+[?1h=ghci> :t addE[?1l>add :: Num a => a -> a -> a
+[?1h=ghci> :t plusE[?1l>plus :: Integer -> Integer -> Integer
+[?1h=ghci> "t pl[K[K[K[K[K:t plus'E[?1l>plus' :: Num a => a -> a -> a
+[?1h=ghci> :t concE[?1l>conc :: [a] -> [a] -> [a]
+[?1h=ghci> add 2.0 2.[K[K30[K.0E[?1l>5.0
+[?1h=ghci> plus 2.0 3.0E[?1l>
+[;1m<interactive>:8:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Fractional Integer)
+        arising from the literal ‘2.0’
+    • In the first argument of ‘plus’, namely ‘2.0’
+      In the expression: plus 2.0 3.0
+      In an equation for ‘it’: it = plus 2.0 3.0[0m[0m
+[?1h=ghci> plus' 2.0 3.0E[?1l>5.0
+[?1h=ghci> conc [1] [2, 3]E[?1l>[1,2,3]
+[?1h=ghci> conc [[1]] [[2.[K, 3[[K]]E[?1l>[[1],[2,3]]
+[?1h=ghci> conc "je[K[Khello wor[K[K[K[K" "wro[K[Korld" -- a string is a lst[K[Kist of charE[?1l>"helloworld"
+[?1h=ghci> conc ['[K"hello"] ["world"]E[?1l>["hello","world"]
+[?1h=ghci> conc (conc ["hello"] ["world'[K"]) ([K["goodbye"]E[?1l>["hello","world","goodbye"]
+[?1h=ghci> conc (conc[[K ["hello"] {[K["world"]) (42)[K[K[K[K[42]E[?1l>
+[;1m<interactive>:15:34: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num String) arising from the literal ‘42’
+    • In the expression: 42
+      In the second argument of ‘conc’, namely ‘[42]’
+      In the expression: conc (conc ["hello"] ["world"]) [42][0m[0m
+[?1h=ghci> :rE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> ghci> let tuple = ("hello", 42) in fst tupleE[?1l>"hello"
+[?1h=ghci> let tuple = ("hello", 42_[K) in sc[Knd tupleE[?1l>42
+[?1h=ghci> let tuple = ("hello", 42) in snd tuple[38D[Klet tuple = ("hello", 42) in snd tuple[9Dfst tuple[38D:r[K[2Dconc (conc ["hello"] ["world"]) [42][3D"goodb ye"][A[11C["hello"] ["world"][KE[K[A[30C[19D(conc ["hello"] ["world"]) ["goodb ye"][A[39C42][KE[K[A[42C[36D:r[KE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> ghci> :r[2Dlet tuple = ("hello", 42) in snd tuple[9Dfst tuple tuple[K[6D tuple[K[6Di tuple[6Dr tuple[6Ds tuple[6Dt tuple[6DE[?1l>"hello"
+[?1h=ghci> let tuple = ("hello", 42) in first tuple tuple[K[6D tuple[K[6D tuple[K[6D tuple[K[6D tuple[K[6Ds tuple[6De tuple[6Dn tuple[6D tuple[K[6Dc tuple[6Do tuple[6Dd tuple[6Dn tuple[6D tuple[K[6D tuple[K[6Dn tuple[6Dd tuple[6D  tuple[6D tuple[K[6DE[?1l>42
+[?1h=ghci> first(12, "hello", [])E[?1l>
+[;1m<interactive>:22:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Couldn't match expected type: (a, b0)
+                  with actual type: (a1, String, [a0])
+    • In the first argument of ‘first’, namely ‘(12, "hello", [])’
+      In the expression: first (12, "hello", [])
+      In an equation for ‘it’: it = first (12, "hello", [])
+    • Relevant bindings include it :: a (bound at <interactive>:22:1)[0m[0m
+[?1h=ghci> :rE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> :r[2Dfirst(12, "hello", [])E[?1l>
+[;1m<interactive>:24:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Couldn't match expected type: (a, b0)
+                  with actual type: (a1, String, [a0])
+    • In the first argument of ‘first’, namely ‘(12, "hello", [])’
+      In the expression: first (12, "hello", [])
+      In an equation for ‘it’: it = first (12, "hello", [])
+    • Relevant bindings include it :: a (bound at <interactive>:24:1)[0m[0m
+[?1h=ghci> first(12, "hello", [])[22D:r[K[2Dfirst(12, "hello", [])[22D:r[KE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> :r[2Dfirst(12, "hello", [])E[?1l>
+[;1m<interactive>:26:6: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Couldn't match expected type: (a, b0)
+                  with actual type: (a1, String, [a0])
+    • In the first argument of ‘first’, namely ‘(12, "hello", [])’
+      In the expression: first (12, "hello", [])
+      In an equation for ‘it’: it = first (12, "hello", [])
+    • Relevant bindings include it :: a (bound at <interactive>:26:1)[0m[0m
+[?1h=ghci> first(12, "hello", [])[22D:r[K[2Dfirst(12, "hello", [])[22D:r[K[2Dfirst(12, "hello", [])[22Dlet tuple = ("hello", 42) in second tuple[41Dfirst(12, "hello", [])[K[22D:r[K[2Dfirst(12, "hello", [])[22D:r[KE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> fnFirst2 [3, 4] (+) (*)E[?1l>12
+[?1h=ghci> fnFirst2 [3, 4, 5] (+) (*)E[?1l>12
+[?1h=ghci> fnFirst2 [3, 4, 5] (+) (*)[12D] (+) (*)[KE[?1l>12
+[?1h=ghci> fnFirst2 [3, 4] (+) (*)[9D, 5] (+) (*)[12D] (+) (*)[K[23D:r[KE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> :r[2DfnFirst2 [3, 4] (+) (*)E[?1l>7
+[?1h=ghci> fnFirst2 [3, 4] (+) (*)[23D:r[K[2DfnFirst2 [3, 4] (+) (*)[9D, 5] (+) (*)E[?1l>12
+[?1h=ghci> fnFirst2 [3, 4, 5] (+) (*)[12D] (+) (*)[K[23D:r[KE[?1l>[1 of 1] Compiling Main             ( lab7-sol.hs, interpreted )
+Ok, one module loaded.
+[?1h=ghci> cartesianProduct [1..4] [2..4]E[?1l>[(1,2),(1,3),(1,4),(2,2),(2,3),(2,4),(3,2),(3,3),(3,4),(4,2),(4,3),(4,4)]
+[?1h=ghci> cartesianProductIf [1..4] [2..4] (>)E[?1l>[(3,2),(4,2),(4,3)]
+[?1h=ghci> let pairs = [(x, x^2) | x <- [1..10]]3 x^2) | x <- [1..10]][21D x^2) | x <- [1..10]][K[21D[C3x^2) | x <- [1..10]][20D[C[C[C+) | x <- [1..10]][17D2) | x <- [1..10]][17Dx) | x <- [1..10]][17D+) | x <- [1..10]][17D1) | x <- [1..10]][17D +2x+1) | x <- [1..10]][22D[C 2x+1) | x <- [1..10]][21D[C[C +1) | x <- [1..10]][19D[C 1) | x <- [1..10]][18D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D [(x, 3x^2 + 2x + 1) | x <- [1..10]][K[36D[C[(x, 3x^2 + 2x + 1) | x <- [1..10]][K[35D[C[C[C[C[C[C
