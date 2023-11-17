@@ -19,6 +19,67 @@ grades_data() ->
 
 
 %% Exercise 2
+perimeter({square, Side}) ->
+  4 * Side;
+perimeter({circle, Radius}) ->
+  2 * 3.14159 * Radius.
+
+guard_perimeter({Type, L}) when Type =:= square ->
+  4 * L;
+guard_perimeter({Type, L}) when Type =:= circle ->
+  2 * 3.14159 * L.
+
+if_perimeter({Type, L}) ->
+  if Type =:= square -> 4 * L;
+      Type =:= circle -> 2 * 3.14159 * L
+  end.
+
+case_perimeter(Shape) ->
+  case Shape of
+    {square, Side} -> 4 * Side;
+    {circle, Radius} -> 2 * 3.14159 * Radius
+  end.
+
+letter_grade(Points) when 90 < Points ->
+  'A';
+letter_grade(Points) when Points =< 90, 80 < Points ->
+  'B';
+letter_grade(Points) when Points =< 80, 70 < Points ->
+  'C';
+letter_grade(Points) when Points =< 70, 60 < Points ->
+  'D';
+letter_grade(_) ->
+  'F'.
+
+if_letter_grade(Points) ->
+  if 90 < Points -> 'A';
+      Points =< 90, 80 < Points -> 'B';
+      Points =< 80, 70 < Points -> 'C';
+      Points =< 70, 60 < Points -> 'D';
+      0 < Points -> 'F'
+  end.
 
 %% Exercise 3.
+data_server(Data) ->       % Data is stored data
+  receive                  % receive a message
+    { ClientPid, Fn } ->   % msg contains function Fn
+      Result = Fn(Data),   % run arbitrary function on Data
+      %io:format("Result is ~w\n", [Result]),
+      ClientPid !  { self(), Result }, % send Result to client
+      data_server(Data);   % loop back
+    stop ->                % got stop message
+      true                 % terminate server
+  end.
+
+data_client(ServerPid, Fn) ->
+  ServerPid ! { self(), Fn }, % send Fn to server
+  receive
+    { _, Result } -> Result   % return Result 
+  end. 
+
+start_data_server(Data) ->
+  spawn(lab8_sol, data_server, [Data]).
+  
+stop_data_server(ServerPid) ->
+  ServerPid ! stop.
 
