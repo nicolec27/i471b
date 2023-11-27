@@ -20,8 +20,31 @@ type Assoc a = [ (String, a) ]
 -- and do notation.
 evalMaybeExpr :: MaybeExpr -> Assoc Int -> Maybe Int
 
-evalMaybeExpr expr assoc = error "TODO"
-  
+evalMaybeExpr (Leaf expr) assoc = Just expr
+
+evalMaybeExpr (Id expr) assoc = case lookup expr assoc of                                          
+  Just v -> Just v                                                                             
+  Nothing -> Nothing
+                                                                                                 
+evalMaybeExpr (Add x y) assoc = do
+  w <- evalMaybeExpr x assoc
+  z <- evalMaybeExpr y assoc
+  return (w + z)                        
+                                                                                                
+evalMaybeExpr (Sub x y) assoc = do
+    w <- evalMaybeExpr x assoc
+    z <- evalMaybeExpr y assoc
+    return (w - z)
+
+evalMaybeExpr (Mul x y) assoc = do
+    w <- evalMaybeExpr x assoc
+    z <- evalMaybeExpr y assoc
+    return (w * z) 
+                       
+evalMaybeExpr (Uminus x) assoc = do
+    w <- evalMaybeExpr x assoc
+    return (- w)
+
 testEvalMaybeExpr = do 
   print "*** test evalMaybeExpr"
   -- unit tests

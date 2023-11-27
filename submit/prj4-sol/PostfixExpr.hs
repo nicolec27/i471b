@@ -51,7 +51,17 @@ data PostfixExpr =
 --      a single PostfixExpr containing the value to be returned.
 postfixExpr :: String -> PostfixExpr
 
-postfixExpr postfix = error "TODO"
+func :: [PostfixExpr] -> String -> [PostfixExpr]
+func stack token
+  | token == "+" = Add y x : z
+  | token == "-" = Sub y x : z
+  | token == "*" = Mul y x : z
+  | token == "uminus" = Uminus x : z
+  | otherwise = Leaf (read token) : stack
+  where
+    x:y:z = stack
+
+postfixExpr postfix = head $ foldl func [] (words postfix)
 
 testPostfixExpr = do
   print "******* test postfixExpr"

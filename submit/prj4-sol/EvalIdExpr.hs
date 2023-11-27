@@ -18,7 +18,16 @@ type Assoc a = [ (String, a) ]
 -- Hint: use Data.List.assoc imported above.
 evalIdExpr :: IdExpr -> Assoc Int -> Int
 
-evalIdExpr expr assoc = error "TODO"
+evalIdExpr (Leaf expr) assoc = expr                       
+
+evalIdExpr (Id expr) assoc = case lookup expr assoc of
+  Just v -> v
+  Nothing -> 0
+                                                                                                 
+evalIdExpr (Add x y) assoc = (evalIdExpr x assoc + evalIdExpr y assoc)                                                                                    
+evalIdExpr (Sub x y) assoc = (evalIdExpr x assoc - evalIdExpr y assoc)                                    
+evalIdExpr (Mul x y) assoc = (evalIdExpr x assoc * evalIdExpr y assoc)
+evalIdExpr (Uminus x) assoc = (- evalIdExpr x assoc)    
 
 
 testEvalIdExpr = do

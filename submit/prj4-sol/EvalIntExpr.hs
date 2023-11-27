@@ -13,7 +13,12 @@ data IntExpr =
 -- Return result of evaluating expr
 evalIntExpr :: IntExpr -> Int
 
-evalIntExpr expr = error "TODO"
+evalIntExpr (Leaf expr) = expr 
+
+evalIntExpr (Add x y) = (evalIntExpr x + evalIntExpr y)
+evalIntExpr (Sub x y) = (evalIntExpr x - evalIntExpr y)
+evalIntExpr (Mul x y) = (evalIntExpr x * evalIntExpr y)
+evalIntExpr (Uminus x) = (- evalIntExpr x)
 
 testEvalIntExpr = do
   print "******* test evalIntExpr"

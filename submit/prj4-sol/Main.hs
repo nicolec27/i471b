@@ -15,7 +15,7 @@ import Test.QuickCheck
 -- Hint: use map with a section.
 toSingletonLists :: [a] -> [[a]]
 
-toSingletonLists list = error "TODO"
+toSingletonLists list = map (\x -> [x]) (list)
 
 testToSingletonLists = do
   print "******* toSingletonLists"
@@ -32,7 +32,7 @@ testToSingletonLists = do
 -- Hint: use the map function or a list comprehension
 listMap :: (a -> b -> c) -> a -> [b] -> [c]
 
-listMap f a list =  error "TODO"
+listMap f a list =  [f a x | x <- list]
 
 testListMap = do
   print "******* listMap"
@@ -49,7 +49,7 @@ testListMap = do
 -- also see definition of member in slides.
 member :: Eq a => a -> [a] -> Bool
 
-member e list = error "TODO"
+member e list = foldl (\acc x -> acc || x == e) (False) (list)
 
 testMember = do
   print "******* member"
@@ -81,13 +81,13 @@ testMember = do
 --   Run:   run these tests when no tests are marked Only.
 --   Skip:  skip these tests.
 allTests = [
-    (Skip testToSingletonLists),
-    (Skip testListMap),
-    (Skip testMember),
-    (Skip testEvalIntExpr),
-    (Skip testEvalIdExpr),
-    (Skip testEvalMaybeExpr),
-    (Skip testPostfixExpr)
+    (Run testToSingletonLists),
+    (Run testListMap),
+    (Run testMember),
+    (Run testEvalIntExpr),
+    (Run testEvalIdExpr),
+    (Run testEvalMaybeExpr),
+    (Run testPostfixExpr)
   ]
 
 
