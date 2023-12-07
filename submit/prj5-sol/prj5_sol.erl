@@ -11,7 +11,7 @@
 %% The skeleton file is distributed with all tests deactivated
 %% by being enclosed within if(false) ... endif directives.
 
--if(false).  
+-if(true).  
 -define(test_eval_num_expr, enabled).
 -define(test_assoc_lookup, enabled).
 -define(test_eval_expr_0, enabled).
@@ -68,8 +68,20 @@ format(Fmt, ArgsList) ->
 % Msg is a string describing the error.
 %
 % Hint: use the format() utility to format a detailed error message.
-eval_num_expr(_Expr) ->
-    'TODO'.
+eval_num_expr({ leaf, Number }) ->
+    Number;
+eval_num_expr({id, _ID}) ->
+    erlang:error({ bad_expr, "not an ID" });
+eval_num_expr({add, X, Y}) ->
+    eval_num_expr(X) + eval_num_expr(Y);
+eval_num_expr({sub, X, Y}) ->
+    eval_num_expr(X) - eval_num_expr(Y);
+eval_num_expr({mul, X, Y}) ->
+    eval_num_expr(X) * eval_num_expr(Y);
+eval_num_expr({uminus, X}) ->
+    - eval_num_expr(X);
+eval_num_expr(Expr) ->
+    erlang:error({ bad_expr, format("type error ~p", [Expr]) }).
 
 -ifdef(test_eval_num_expr).
 eval_num_expr_test_() -> 
@@ -104,15 +116,20 @@ eval_num_expr_test_() ->
 %
 % Hint: implement by wrapping lists:keyfind() and using a case
 % to pattern-match on the result.
-assoc_lookup(_Key, _Assoc, _DefaultFn) ->
-    'TODO'.
+assoc_lookup(Key, Assoc, DefaultFn) ->
+    case lists:keyfind(Key, 1, Assoc) of
+        {Key, Value} -> Value;
+        false -> DefaultFn()
+    end.
 
 % Lookup the Value of Key in assoc list Assoc list containing
 % { Key, Value } pairs.  If not found, return 0.
 %
 % Hint: wrap assoc_lookup.
-assoc_lookup_0(_Key, _Assoc) ->
-    'TODO'.
+assoc_lookup_0(Key, Assoc) ->
+    assoc_lookup(Key, Assoc, 
+		fun() -> 0 
+	end).
 				     
 % Lookup the Value of Key in assoc list Assoc list containing
 % { Key, Value } pairs.  If not found, throw an exception
@@ -120,8 +137,12 @@ assoc_lookup_0(_Key, _Assoc) ->
 % describing the error.
 %
 % Hint: wrap assoc_lookup.
-assoc_lookup_throw(_Key, _Assoc) ->
-    'TODO'.
+assoc_lookup_throw(Key, Assoc) ->
+    case assoc_lookup(Key, Assoc, 
+		fun() -> throw({ not_found, "error" }) 
+		end) 
+		of Result -> Result
+    end.
 
 -ifdef(test_assoc_lookup).
 assoc_lookup_test_() -> 
@@ -156,8 +177,18 @@ assoc_lookup_test_() ->
 % Hint: return fun Eval (Expr, Env) -> ... end where the body of
 % Eval() is implemented using pattern matching on Expr and can
 % make recursive calls to Eval().
-make_expr_evaluator(_LookupFn) ->
-    'TODO'.
+make_expr_evaluator(LookupFn) ->
+    fun Eval(Expr, Env) ->
+        case Expr of
+            {leaf, Value} -> Value; 
+            {id, ID} -> LookupFn(ID, Env); 
+            {add, X, Y} -> Eval(X, Env) + Eval(Y, Env); 
+            {sub, X, Y} -> Eval(X, Env) - Eval(Y, Env); 
+            {mul, X, Y} -> Eval(X, Env) * Eval(Y, Env); 
+            {uminus, X} -> -Eval(X, Env);
+            _ -> erlang:error({ bad_expr, "error" })
+        end
+    end.
 
 % Return the result of evaluating Expr in environment given by
 % assoc-list Env.  A sub-expression of Expr of the form {id, ID}
@@ -167,8 +198,9 @@ make_expr_evaluator(_LookupFn) ->
 % Note that you cannot refer to assoc_lookup_0 directly
 % as that is simply an atom; instead use the syntax
 % fun assoc_lookup_0/2.
-eval_expr_0(_Expr, _Env) ->
-    'TODO'.
+eval_expr_0(Expr, Env) ->
+    EvalFn = make_expr_evaluator(fun assoc_lookup_0/2),
+    EvalFn(Expr, Env).
     
 % Return the result of evaluating Expr in environment given by
 % assoc-list Env.  A sub-expression of Expr of the form {id, ID}
@@ -177,8 +209,9 @@ eval_expr_0(_Expr, _Env) ->
 % the error.
 %
 % Hint: Implement as a wrapper around make_expr_evaluator().
-eval_expr_throw(_Expr, _Env) ->
-    'TODO'.
+eval_expr_throw(Expr, Env) ->
+    EvalFn = make_expr_evaluator(fun assoc_lookup_throw/2),
+    EvalFn(Expr, Env).
 
 -ifdef(test_eval_expr_0).
 eval_expr_0_test_() -> 
@@ -285,16 +318,25 @@ eval_expr_throw_test_() ->
 %    return the pair { ExprEval(Expr, Env), Env }.
 %
 % Hint: Return an anonymous function fun (Stmt, Env) -> ... end.
-make_stmt_evaluator(_ExprEval) ->
-    'TODO'.
+make_stmt_evaluator(ExprEval) ->
+    fun
+        ({ assign, ID, Expr }, Env) ->
+            {void, [ { ID, ExprEval(Expr, Env) } | Env ]};
+        (Expr, Env) ->
+            {ExprEval(Expr, Env), Env}
+    end.
+
 
 % Return the result of evaluating Stmt in environment given by
 % assoc-list Env.  A sub-expression of Stmt of the form {id, ID}
 % where ID is not in Env should evaluate to 0.
 %
 % Hint: Implement as a wrapper around make_stmt_evaluator().
-eval_stmt_0(_Stmt, _Env) ->
-    'TODO'.
+eval_stmt_0(Stmt, Env) ->
+    Result = make_stmt_evaluator(fun(Expr, EnvExpr) -> 
+		eval_expr_0(Expr, EnvExpr) 
+		end),
+    Result(Stmt, Env).
 
 % Return the result of evaluating Stmt in environment given by
 % assoc-list Env.  A sub-expression of Stmt of the form {id, ID}
@@ -303,8 +345,9 @@ eval_stmt_0(_Stmt, _Env) ->
 % the error.
 %
 % Hint: Implement as a wrapper around make_stmt_evaluator().
-eval_stmt_throw(_Stmt, _Env) ->
-    'TODO'.
+eval_stmt_throw(Stmt, Env) ->
+    Result = make_stmt_evaluator(fun eval_expr_throw/2),
+    Result(Stmt, Env).
 
 -ifdef(test_eval_stmt_0).
 eval_stmt_0_test_() -> 
@@ -438,8 +481,46 @@ eval_stmt_throw_test_() ->
 %
 % Hint: evaluate Fn() within a try-catch, with the catch matching
 % throw:Exception or error:Error.
-server_fn(_Fn, _State) ->
-    'TODO'.
+server_fn(Fn, State) ->
+    receive
+        {ClientPid, stop} ->
+            ClientPid ! {self(), stopped};
+        
+        {ClientPid, set_fn, Fn1} ->
+            ClientPid ! {self(), set_fn},
+            server_fn(Fn1, State);
+        
+        {ClientPid, set_state, State1} ->
+            ClientPid ! {self(), set_state},
+            server_fn(Fn, State1);
+
+        {ClientPid, do_fn, Arg} ->
+            try
+                Result = Fn(Arg, State),
+                case Result of
+                    {Value, State1} ->
+                        ClientPid ! {self(), Value},
+                        server_fn(Fn, State1);
+
+                    _ ->
+                        ClientPid ! {self(), Result},
+                        server_fn(Fn, State)
+                end
+            catch
+                throw:E ->
+                    ClientPid ! {self(), throw, E},
+                    server_fn(Fn, State);
+
+                error:E ->
+                    ClientPid ! {self(), error, E},
+                    server_fn(Fn, State)
+            end;
+
+        Msg ->
+            io:format(standard_error, "error ~p~n", [Msg]),
+            server_fn(Fn, State)
+    end.
+
 			
 -ifdef(test_server_fn).
 
